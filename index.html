@@ -1,0 +1,2601 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>M Power Up — Coaching exécutif certifié HEC Paris pour cadres en reconversion</title>
+<meta name="description" content="Power Coaching avec Maryam Housni, coach professionnelle certifiée HEC Paris. Accompagnement sans limite pour cadres et dirigeants en transition de carrière, reconversion ou sortie de burn-out.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ============ TOKENS (premium navy palette) ============ */
+  :root {
+    --bg-primary: #0E1B35;
+    --bg-primary-accent: #1B2B4F;
+    --bg-secondary: #ffffff;
+    --bg-secondary-accent: #ECEFF4;
+    --bg-inverse: #F1EEE5;
+    --bg-page: #F2EFE5;
+    --text-primary: #0E1B35;
+    --text-secondary: #4A5468;
+    --text-inverse: #F1EEE5;
+    --text-accent: #A8AEBE;
+    --border-primary: #0E1B35;
+    --border-secondary: #F1EEE5;
+    --border-inverse-soft: #ffffff1f;
+    --border-soft: #0E1B3514;
+    --radius-xs: 1.25rem;
+    --gap-xxs: 1rem;
+    --gap-xs: 1.5rem;
+    --gap-sm: 2rem;
+    --gap-md: 2.5rem;
+    --gap-lg: 5rem;
+    --gap-xl: 7.5rem;
+    --gap-xxl: 10rem;
+    --container-sm: 80.625rem;
+    --serif: 'Marcellus', 'Times New Roman', serif;
+    --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  /* ============ RESET ============ */
+  *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg-page);
+    color: var(--text-primary);
+    font-size: 1rem;
+    line-height: 155%;
+    letter-spacing: .03rem;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  ul { list-style: none; }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; }
+  h1,h2,h3,h4,h5,h6 { font-family: var(--serif); font-weight: 400; color: var(--text-primary); }
+  h1 { font-size: 3.75rem; line-height: 105%; letter-spacing: -.02em; }
+  h2 { font-size: 2.5rem; line-height: 115%; letter-spacing: -.01rem; }
+  h3 { font-size: 1.875rem; line-height: 115%; }
+  h4 { font-size: 1.5rem; line-height: 120%; }
+  h5 { font-size: 1.25rem; line-height: 130%; }
+
+  @media (max-width: 991px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; line-height: 110%; }
+  }
+  @media (max-width: 600px) {
+    h1 { font-size: 2.1rem; line-height: 110%; }
+    h2 { font-size: 1.75rem; }
+  }
+
+  .container { max-width: var(--container-sm); margin: 0 auto; padding: 0 var(--gap-sm); }
+  section { padding: var(--gap-xl) 0; }
+
+  /* ============ TAG / EYEBROW ============ */
+  .small-tag {
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .14rem;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+  }
+  .small-tag.inverse { color: var(--text-accent); }
+  .small-tag::before {
+    content: ""; width: 6px; height: 6px; border-radius: 50%;
+    background: var(--text-secondary);
+  }
+  .small-tag.inverse::before { background: var(--text-accent); }
+
+  /* ============ BUTTON (Strevora skewed-overlay) ============ */
+  .btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    padding: 1.15rem 2.4rem;
+    font-family: var(--sans);
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: .14rem;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    background: transparent;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color .35s ease;
+    line-height: 1;
+  }
+  .btn::before {
+    content: ""; position: absolute; inset: 0;
+    border: 1px solid var(--border-primary);
+    pointer-events: none;
+    z-index: 2;
+  }
+  .btn::after {
+    content: ""; position: absolute; inset: 0 auto 0 0;
+    width: 0%;
+    background: var(--text-primary);
+    transform: skew(-25deg);
+    transform-origin: left;
+    transition: width .45s cubic-bezier(.7,.05,.3,1);
+    z-index: 0;
+  }
+  .btn:hover { color: #fff; }
+  .btn:hover::after { width: 110%; }
+  .btn span { position: relative; z-index: 3; }
+  .btn.inverse { color: var(--text-inverse); }
+  .btn.inverse::before { border-color: var(--border-secondary); }
+  .btn.inverse::after { background: var(--text-inverse); }
+  .btn.inverse:hover { color: var(--text-primary); }
+  .btn.solid { color: #fff; }
+  .btn.solid::before { background: var(--text-primary); border-color: var(--text-primary); }
+  .btn.solid::after { background: var(--text-inverse); }
+  .btn.solid:hover { color: var(--text-primary); }
+
+  /* ============ NAVBAR ============ */
+  .nav {
+    position: sticky; top: 0; z-index: 999;
+    background: var(--bg-secondary);
+    box-shadow: 0 1px 0 var(--border-soft);
+  }
+  .nav-inner {
+    max-width: 115.5rem; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: stretch;
+    padding-left: 1.5rem;
+  }
+  .logo {
+    display: flex; align-items: center; gap: .65rem;
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    padding: 1.1rem 0;
+    letter-spacing: -.01em;
+  }
+  .logo-mark {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--bg-primary);
+    color: var(--bg-page);
+    display: grid; place-items: center;
+    font-family: var(--serif);
+    font-size: 1.05rem;
+  }
+  .nav-links {
+    flex: 1; display: flex; justify-content: center; gap: 2.1rem;
+    align-items: center;
+  }
+  .nav-links a {
+    font-size: .9rem; color: var(--text-primary);
+    transition: opacity .3s;
+  }
+  .nav-links a:hover { opacity: .55; }
+  .nav-cta-wrap {
+    background: var(--text-primary);
+    color: #fff;
+    padding: 0 var(--gap-sm);
+    display: flex; align-items: center; justify-content: center;
+    min-width: 14.5rem;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .14rem;
+    text-transform: uppercase;
+    position: relative; overflow: hidden;
+    transition: color .35s;
+  }
+  .nav-cta-wrap::after {
+    content: ""; position: absolute; inset: 0 auto 0 0;
+    width: 0%; background: var(--text-inverse);
+    transform: skew(-25deg);
+    transition: width .45s cubic-bezier(.7,.05,.3,1);
+  }
+  .nav-cta-wrap:hover { color: var(--text-primary); }
+  .nav-cta-wrap:hover::after { width: 130%; }
+  .nav-cta-wrap span { position: relative; z-index: 2; }
+
+  @media (max-width: 1100px) {
+    .nav-links { display: none; }
+    .nav-cta-wrap { min-width: 11rem; padding: 0 1.25rem; font-size: .7rem; }
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    background: var(--bg-primary);
+    height: 88vh; min-height: 640px;
+    position: relative; overflow: hidden;
+    color: var(--text-inverse);
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 75% 25%, #1B2B4F70, transparent 55%),
+      radial-gradient(circle at 20% 90%, #0E1B35, transparent 60%);
+  }
+  .hero-image {
+    position: absolute; right: -2%; top: 0;
+    width: 50%; height: 100%;
+    object-fit: cover;
+    object-position: 50% 25%;
+    opacity: .88;
+    filter: grayscale(20%) contrast(1.02);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 38%, black 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, black 38%, black 100%);
+  }
+  .hero-image-tint {
+    position: absolute; right: 0; top: 0;
+    width: 50%; height: 100%;
+    background: linear-gradient(to right, var(--bg-primary), transparent 42%);
+    pointer-events: none;
+  }
+  .hero-main {
+    position: relative; z-index: 2;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    height: 88vh; min-height: 640px;
+    padding-bottom: 9rem;
+    max-width: var(--container-sm); margin: 0 auto;
+    padding-left: var(--gap-sm); padding-right: var(--gap-sm);
+  }
+  .hero-content { max-width: 36rem; }
+  .hero h1 {
+    color: var(--text-inverse);
+    margin: var(--gap-xs) 0 var(--gap-sm);
+    font-size: clamp(2.4rem, 4.6vw, 4.2rem);
+    line-height: 110%;
+  }
+  .hero h1 em { font-style: normal; color: var(--text-accent); opacity: .65; }
+  .hero p {
+    color: var(--text-accent);
+    max-width: 30rem;
+    margin-bottom: var(--gap-md);
+    font-size: 1rem;
+    line-height: 160%;
+  }
+  .hero-button-wrapper { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+  .hero-link-soft {
+    color: var(--text-accent);
+    font-size: .82rem;
+    letter-spacing: .12rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 1.15rem .5rem;
+    transition: color .25s;
+    display: inline-flex; align-items: center; gap: .5rem;
+  }
+  .hero-link-soft:hover { color: var(--text-inverse); }
+  .hero-link-soft svg { transition: transform .3s; }
+  .hero-link-soft:hover svg { transform: translateX(4px); }
+
+  .hero-meta {
+    position: absolute;
+    left: var(--gap-sm); bottom: 2.2rem;
+    z-index: 3;
+    display: flex; gap: 2rem; align-items: center;
+    color: var(--text-accent);
+    font-size: .78rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+  }
+  .hero-meta span { display: inline-flex; align-items: center; gap: .55rem; }
+  .hero-meta svg { color: var(--text-inverse); opacity: .6; }
+
+  .hero-big-text {
+    position: absolute;
+    left: 0; right: 0;
+    bottom: -2.8vw;
+    padding: 0 2.5vw;
+    text-align: center;
+    color: var(--text-inverse);
+    font-family: var(--sans);
+    font-weight: 600;
+    line-height: 100%;
+    text-transform: uppercase;
+    letter-spacing: -.025em;
+    font-size: clamp(40px, 13.5vw, 220px);
+    pointer-events: none;
+    user-select: none;
+    z-index: 1;
+    opacity: .14;
+    white-space: nowrap;
+  }
+  @media (max-width: 991px) {
+    .hero-meta { display: none; }
+  }
+
+  /* ============ COUNTERS BAND ============ */
+  .counters {
+    padding: var(--gap-lg) 0;
+    background: var(--bg-page);
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .counters-grid {
+    display: grid; grid-template-columns: 1.1fr 1fr 0.04rem 1fr 0.04rem 1fr 0.04rem 1fr;
+    gap: var(--gap-md); align-items: center;
+  }
+  .counters-head h2 { margin-top: var(--gap-xs); font-size: 2rem; line-height: 115%; }
+  .vert-divider { width: 1px; background: var(--border-soft); align-self: stretch; min-height: 90px; }
+  .counter-num {
+    font-family: var(--serif);
+    font-size: 3.4rem;
+    line-height: 100%;
+    letter-spacing: -.04em;
+    margin-bottom: .5rem;
+  }
+  .counter-num small { font-size: .55em; vertical-align: super; opacity: .8; }
+  .counter-label { font-size: .85rem; color: var(--text-secondary); max-width: 11rem; }
+
+  @media (max-width: 991px) {
+    .counters-grid { grid-template-columns: 1fr 1fr; }
+    .vert-divider { display: none; }
+  }
+
+  /* ============ MANIFESTO BAND ============ */
+  .manifesto {
+    background: var(--bg-primary);
+    color: var(--text-inverse);
+    padding: var(--gap-xl) 0;
+  }
+  .manifesto-main {
+    max-width: var(--container-sm); margin: 0 auto;
+    padding: 0 var(--gap-sm);
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--gap-md);
+    align-items: end;
+  }
+  .manifesto h2 { color: var(--text-inverse); max-width: 38rem; }
+  .manifesto h2 em { font-style: italic; opacity: .75; }
+  .manifesto p { color: var(--text-accent); max-width: 28rem; margin-bottom: var(--gap-sm); }
+
+  @media (max-width: 991px) { .manifesto-main { grid-template-columns: 1fr; align-items: start; } }
+
+  /* ============ MARQUEE (écoles & secteurs) ============ */
+  .clients {
+    background: var(--bg-primary-accent);
+    padding: 2.6rem 0 3rem;
+  }
+  .clients-info {
+    color: var(--text-accent);
+    text-align: center;
+    margin-bottom: var(--gap-xs);
+    font-size: .82rem;
+    letter-spacing: .12rem;
+    text-transform: uppercase;
+  }
+  .marquee-wrapper { overflow: hidden; position: relative; }
+  .marquee-wrapper::before, .marquee-wrapper::after {
+    content: ""; position: absolute; top: 0; bottom: 0; width: 22%;
+    z-index: 2; pointer-events: none;
+  }
+  .marquee-wrapper::before { left: 0; background: linear-gradient(90deg, var(--bg-primary-accent), transparent); }
+  .marquee-wrapper::after  { right: 0; background: linear-gradient(-90deg, var(--bg-primary-accent), transparent); }
+  .marquee-train {
+    display: flex; gap: 5.5rem; padding-right: 5.5rem;
+    animation: marquee 32s linear infinite;
+    width: max-content;
+  }
+  .marquee-text {
+    color: var(--text-accent);
+    font-family: var(--serif);
+    font-size: 1.95rem;
+    white-space: nowrap;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* ============ SECTION HEADER ============ */
+  .sec-head { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap-md); margin-bottom: var(--gap-md); align-items: end; }
+  .sec-head h2 { margin-top: var(--gap-xs); }
+  .sec-head .right p { color: var(--text-secondary); max-width: 32rem; }
+  @media (max-width: 768px) { .sec-head { grid-template-columns: 1fr; } }
+
+  /* ============ MÉTHODE / SERVICES ============ */
+  .services { background: var(--bg-page); }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    background: var(--border-soft);
+    border: 1px solid var(--border-soft);
+  }
+  .service-card {
+    background: var(--bg-page);
+    padding: var(--gap-md) var(--gap-sm);
+    transition: background .4s ease, color .4s ease;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .service-card .icon {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: var(--bg-primary);
+    color: var(--text-inverse);
+    display: grid; place-items: center;
+    margin-bottom: var(--gap-sm);
+    transition: transform .5s ease, background .4s, color .4s;
+  }
+  .service-card:hover { background: var(--bg-primary); color: var(--text-inverse); }
+  .service-card:hover h4, .service-card:hover p { color: var(--text-inverse); }
+  .service-card:hover .icon { background: var(--bg-page); color: var(--text-primary); transform: rotate(45deg); }
+  .service-card h4 { margin-bottom: var(--gap-xxs); transition: color .4s; font-size: 1.4rem; }
+  .service-card p { color: var(--text-secondary); font-size: .92rem; transition: color .4s; }
+  .service-card .num {
+    position: absolute; top: var(--gap-sm); right: var(--gap-sm);
+    font-family: var(--serif);
+    font-size: .9rem;
+    letter-spacing: .1rem;
+    opacity: .5;
+  }
+
+  @media (max-width: 991px) { .services-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .services-grid { grid-template-columns: 1fr; } }
+
+  /* ============ CASE STUDIES — UNFOLD ON HOVER ============ */
+  .cases {
+    padding: var(--gap-xl) 0;
+    background: var(--bg-inverse);
+  }
+  .cases-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap-xs);
+    margin-top: var(--gap-md);
+  }
+  .case-card {
+    border-radius: var(--radius-xs);
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    position: relative;
+    cursor: pointer;
+    background: var(--bg-primary);
+  }
+  .case-card .ph {
+    position: absolute; inset: 0;
+    overflow: hidden;
+  }
+  .case-card .ph img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 1.2s ease;
+  }
+  .case-card:hover .ph img { transform: scale(1.06); }
+  .case-content {
+    border-radius: var(--radius-xs);
+    background: var(--bg-secondary);
+    padding: 1.5rem 1.75rem 1.5rem;
+    position: absolute; inset: auto 1rem 1rem 1rem;
+    overflow: hidden;
+  }
+  .case-tag {
+    font-size: .68rem;
+    font-weight: 600;
+    letter-spacing: .15rem;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: .55rem;
+  }
+  .case-content h4 { font-size: 1.3rem; margin-bottom: 0; line-height: 120%; }
+  .case-details {
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;
+    border-top: 0 solid var(--border-soft);
+    transition: max-height .55s ease, opacity .35s ease, margin-top .4s ease, padding-top .4s ease, border-top-width .35s ease;
+    padding-top: 0;
+    display: flex; flex-direction: column; gap: 6px;
+    overflow: hidden;
+  }
+  .case-card:hover .case-details {
+    max-height: 220px;
+    opacity: 1;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top-width: 1px;
+  }
+  .case-detail-row {
+    display: flex; justify-content: space-between; gap: 1rem;
+    font-size: .85rem;
+  }
+  .case-detail-row .lbl { color: var(--text-secondary); }
+  .case-detail-row .val { color: var(--text-primary); text-align: right; }
+
+  @media (max-width: 991px) { .cases-grid { grid-template-columns: 1fr; } }
+
+  /* ============ POUR QUI (3 niches) ============ */
+  .niches { background: var(--bg-page); }
+  .niches-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap-xs);
+    margin-top: var(--gap-md);
+  }
+  .niche {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-xs);
+    padding: var(--gap-md);
+    border: 1px solid var(--border-soft);
+    display: flex; flex-direction: column; gap: var(--gap-xs);
+    transition: transform .4s ease, box-shadow .4s ease;
+  }
+  .niche:hover { transform: translateY(-6px); box-shadow: 0 18px 42px #0E1B3518; }
+  .niche .img-wrap {
+    aspect-ratio: 16/10; border-radius: 1rem; overflow: hidden;
+    background: var(--bg-page);
+  }
+  .niche .img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+  .niche h4 { font-size: 1.5rem; }
+  .niche p { color: var(--text-secondary); font-size: .95rem; }
+  .niche ul { display: flex; flex-direction: column; gap: .55rem; margin-top: .25rem; }
+  .niche li { display: flex; gap: .6rem; align-items: flex-start; font-size: .9rem; color: var(--text-secondary); }
+  .niche li::before { content: "→"; color: var(--bg-primary); margin-top: 1px; }
+
+  @media (max-width: 991px) { .niches-grid { grid-template-columns: 1fr; } }
+
+  /* ============ ABOUT MARYAM (split) ============ */
+  .about-maryam { background: var(--bg-page); padding: var(--gap-xl) 0; }
+  .about-maryam-grid {
+    display: grid; grid-template-columns: 1fr 1.2fr; gap: var(--gap-md);
+    align-items: center;
+  }
+  .about-photo {
+    border-radius: var(--radius-xs); overflow: hidden;
+    aspect-ratio: 3/4;
+    position: relative;
+  }
+  .about-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .about-photo .badge {
+    position: absolute; bottom: 1rem; left: 1rem; right: 1rem;
+    background: var(--bg-secondary); padding: 1rem 1.25rem;
+    border-radius: 1rem;
+    display: flex; gap: .85rem; align-items: center;
+  }
+  .about-photo .badge .seal {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--bg-primary); color: var(--text-inverse);
+    display: grid; place-items: center; flex-shrink: 0;
+    font-family: var(--serif); font-size: 1rem;
+  }
+  .about-photo .badge strong { display: block; font-family: var(--serif); font-size: 1rem; }
+  .about-photo .badge span { font-size: .82rem; color: var(--text-secondary); }
+  .about-text h2 { margin-top: var(--gap-xs); margin-bottom: var(--gap-sm); }
+  .about-text p { color: var(--text-secondary); margin-bottom: 1rem; max-width: 36rem; font-size: 1.02rem; }
+  .about-text .highlight {
+    background: var(--bg-secondary); border-left: 3px solid var(--bg-primary);
+    padding: 1rem 1.25rem; border-radius: 6px;
+    color: var(--text-primary); font-family: var(--serif); font-size: 1.15rem;
+    line-height: 140%; margin: var(--gap-sm) 0;
+  }
+  .about-cta-row { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: var(--gap-sm); }
+
+  @media (max-width: 991px) { .about-maryam-grid { grid-template-columns: 1fr; } }
+
+  /* ============ CREDENTIALS ============ */
+  .creds {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-soft);
+    padding: var(--gap-xl) 0;
+  }
+  .creds-head {
+    display: grid; grid-template-columns: 1.2fr 1fr;
+    gap: var(--gap-md);
+    margin-bottom: var(--gap-md);
+    align-items: end;
+  }
+  .creds-head h2 { margin-top: var(--gap-xs); max-width: 32rem; }
+  .creds-head p { color: var(--text-secondary); max-width: 30rem; }
+  .creds-head-right {
+    display: flex; flex-direction: column;
+    gap: var(--gap-sm);
+    align-items: flex-start;
+  }
+  .creds-badge-wrap {
+    display: inline-flex; align-items: center;
+    gap: 1rem;
+    padding: .85rem 1.1rem;
+    background: var(--bg-page);
+    border: 1px solid var(--border-soft);
+    border-radius: 6px;
+    transition: transform .35s, box-shadow .35s, border-color .35s;
+    text-decoration: none;
+    color: inherit;
+    align-self: flex-end;
+  }
+  .creds-badge-wrap:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px #0E1B351a;
+    border-color: var(--bg-primary);
+  }
+  .creds-badge-wrap img {
+    width: 92px; height: auto; display: block;
+    flex-shrink: 0;
+  }
+  .creds-badge-wrap .badge-meta {
+    display: flex; flex-direction: column;
+    gap: 2px;
+    border-left: 1px solid var(--border-soft);
+    padding-left: 1rem;
+    min-width: 0;
+  }
+  .creds-badge-wrap .badge-meta .lbl {
+    font-size: .65rem;
+    letter-spacing: .14rem;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+  }
+  .creds-badge-wrap .badge-meta strong {
+    color: var(--text-primary);
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: -.005em;
+    line-height: 1.25;
+  }
+  .creds-badge-wrap .badge-meta .verif {
+    font-size: .72rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+    display: inline-flex; align-items: center; gap: .35rem;
+  }
+  .creds-badge-wrap .badge-meta .verif svg { color: var(--bg-primary); }
+  @media (max-width: 991px) {
+    .creds-badge-wrap { align-self: flex-start; }
+  }
+  .creds-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border-soft);
+    border: 1px solid var(--border-soft);
+  }
+  .cred {
+    background: var(--bg-secondary);
+    padding: var(--gap-md) var(--gap-sm) var(--gap-sm);
+    display: flex; flex-direction: column;
+    gap: 1.1rem;
+    transition: background .35s ease;
+    position: relative;
+  }
+  .cred:hover { background: var(--bg-page); }
+  .cred-seal {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    border: 1px solid var(--border-primary);
+    display: grid; place-items: center;
+    font-family: var(--serif);
+    font-size: 1rem;
+    color: var(--text-primary);
+    line-height: 1;
+    text-align: center;
+    flex-shrink: 0;
+    transition: background .35s, color .35s;
+  }
+  .cred:hover .cred-seal { background: var(--bg-primary); color: var(--text-inverse); border-color: var(--bg-primary); }
+  .cred-seal small { font-size: .55em; display: block; letter-spacing: .1em; opacity: .7; margin-top: 2px; }
+  .cred-body { flex: 1; display: flex; flex-direction: column; gap: .35rem; }
+  .cred-body strong {
+    font-family: var(--serif); font-weight: 400;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    line-height: 130%;
+  }
+  .cred-body span {
+    font-size: .82rem;
+    color: var(--text-secondary);
+    line-height: 145%;
+  }
+  .cred-meta {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-soft);
+    font-size: .7rem;
+    letter-spacing: .14rem;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    display: flex; justify-content: space-between; gap: .5rem;
+  }
+
+  .creds-strip {
+    margin-top: var(--gap-md);
+    padding: 1.25rem var(--gap-sm);
+    background: var(--bg-page);
+    border-radius: 6px;
+    border: 1px solid var(--border-soft);
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 1rem; flex-wrap: wrap;
+    color: var(--text-secondary);
+    font-size: .9rem;
+  }
+  .creds-strip strong { color: var(--text-primary); font-family: var(--serif); font-weight: 400; }
+  .creds-strip svg { color: var(--bg-primary); }
+
+  @media (max-width: 991px) {
+    .creds-head { grid-template-columns: 1fr; }
+    .creds-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) { .creds-grid { grid-template-columns: 1fr; } }
+
+  /* ============ TESTIMONIALS ============ */
+  .testi {
+    background: var(--bg-primary);
+    background-image: radial-gradient(circle, #1B2B4F66 1px, transparent 1.5px);
+    background-size: 28px 28px;
+    background-position: center;
+    color: var(--text-inverse);
+    padding: var(--gap-xl) 0;
+  }
+  .testi-container { max-width: 56rem; margin: 0 auto; padding: 0 var(--gap-sm); }
+  .testi-top { text-align: center; max-width: 40rem; margin: 0 auto var(--gap-md); }
+  .testi-top h2 { color: var(--text-inverse); margin-top: var(--gap-xs); }
+  .testi-top .small-tag { color: var(--text-accent); justify-content: center; display: inline-flex; }
+
+  .testi-slider { position: relative; max-width: 42rem; margin: 0 auto; min-height: 320px; }
+  .testi-slide {
+    position: absolute; inset: 0;
+    text-align: center;
+    opacity: 0; transition: opacity .6s;
+    pointer-events: none;
+  }
+  .testi-slide.active { opacity: 1; pointer-events: auto; position: relative; }
+  .testi-slide blockquote {
+    font-family: var(--serif);
+    font-size: 1.55rem;
+    line-height: 145%;
+    margin-bottom: var(--gap-sm);
+    color: var(--text-inverse);
+  }
+  .testi-author { display: flex; align-items: center; justify-content: center; gap: 1rem; }
+  .testi-author .avatar {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: var(--bg-primary-accent);
+    color: var(--text-inverse);
+    display: grid; place-items: center;
+    font-family: var(--serif); font-size: 1.2rem;
+  }
+  .testi-author .who strong { display: block; color: var(--text-inverse); font-family: var(--serif); font-size: 1.05rem; }
+  .testi-author .who span { color: var(--text-accent); font-size: .82rem; }
+
+  .testi-controls { display: flex; justify-content: center; gap: 1rem; margin-top: var(--gap-md); }
+  .testi-controls button {
+    width: 50px; height: 50px; border-radius: 50%;
+    border: 1px solid #ffffff33;
+    color: var(--text-inverse);
+    transition: background .3s, color .3s;
+  }
+  .testi-controls button:hover { background: var(--text-inverse); color: var(--text-primary); }
+
+  /* ============ SOCIAL / LINKEDIN — CAROUSEL ============ */
+  .social { background: var(--bg-page); padding: var(--gap-xl) 0; overflow: hidden; }
+  .social-head { text-align: left; margin-bottom: var(--gap-md); }
+
+  .social-carousel {
+    position: relative;
+    margin-left: calc(-1 * var(--gap-sm));
+    margin-right: calc(-1 * var(--gap-sm));
+    padding: 0 var(--gap-sm);
+  }
+  .social-track {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: var(--gap-sm);
+    padding-bottom: 1rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .social-track::-webkit-scrollbar { display: none; }
+
+  .social-card {
+    flex: 0 0 360px;
+    background: var(--bg-secondary);
+    border-radius: 6px;
+    border: 1px solid var(--border-soft);
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: transform .4s ease, box-shadow .4s ease;
+    cursor: pointer;
+    scroll-snap-align: start;
+  }
+  .social-card:hover { transform: translateY(-6px); box-shadow: 0 18px 42px #0E1B3518; }
+
+  .social-controls {
+    display: flex; gap: .65rem;
+    align-items: center;
+  }
+  .social-controls button {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-soft);
+    color: var(--text-primary);
+    display: grid; place-items: center;
+    transition: background .25s, color .25s, transform .25s, opacity .25s;
+  }
+  .social-controls button:hover { background: var(--text-primary); color: var(--text-inverse); transform: translateY(-2px); }
+  .social-controls button:disabled { opacity: .35; cursor: default; transform: none; }
+  .social-controls button:disabled:hover { background: var(--bg-secondary); color: var(--text-primary); }
+
+  .social-progress {
+    height: 2px;
+    background: var(--border-soft);
+    border-radius: 2px;
+    margin-top: var(--gap-sm);
+    position: relative;
+    overflow: hidden;
+  }
+  .social-progress-bar {
+    position: absolute; left: 0; top: 0;
+    height: 100%;
+    background: var(--bg-primary);
+    width: 25%;
+    border-radius: 2px;
+    transition: width .35s ease, transform .35s ease;
+  }
+  .social-card-head {
+    padding: 1.1rem 1.25rem .85rem;
+    display: flex; align-items: center; gap: .75rem;
+  }
+  .social-avatar {
+    width: 42px; height: 42px; border-radius: 50%;
+    overflow: hidden; flex-shrink: 0;
+    background: var(--bg-page);
+  }
+  .social-avatar img { width: 100%; height: 100%; object-fit: cover; }
+  .social-author { flex: 1; min-width: 0; }
+  .social-author strong {
+    display: block;
+    font-family: var(--serif);
+    font-size: 1rem;
+    line-height: 120%;
+    color: var(--text-primary);
+  }
+  .social-author span {
+    display: block;
+    font-size: .76rem;
+    color: var(--text-secondary);
+    line-height: 130%;
+    margin-top: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .social-author .meta {
+    font-size: .72rem;
+    color: var(--text-secondary);
+    opacity: .7;
+    margin-top: 3px;
+    display: inline-flex; align-items: center; gap: .35rem;
+    text-transform: none; letter-spacing: 0;
+  }
+  .social-li-icon {
+    width: 22px; height: 22px;
+    background: #0A66C2;
+    border-radius: 5px;
+    color: #fff;
+    display: grid; place-items: center;
+    flex-shrink: 0;
+  }
+  .social-body {
+    padding: 0 1.25rem .9rem;
+    font-size: .9rem;
+    line-height: 150%;
+    color: var(--text-primary);
+  }
+  .social-body p { margin-bottom: .55rem; }
+  .social-body .read-more {
+    color: var(--text-secondary);
+    font-size: .82rem;
+  }
+  .social-body strong { font-weight: 600; }
+  .social-img {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: var(--bg-page);
+  }
+  .social-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease;
+  }
+  .social-card:hover .social-img img { transform: scale(1.04); }
+  .social-foot {
+    padding: .75rem 1.25rem 1rem;
+    border-top: 1px solid var(--border-soft);
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: .78rem; color: var(--text-secondary);
+  }
+  .social-stats { display: inline-flex; align-items: center; gap: .35rem; }
+  .social-stats .dot-icons {
+    display: inline-flex;
+    margin-right: .2rem;
+  }
+  .social-stats .dot-icons span {
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    border: 1.5px solid var(--bg-secondary);
+    margin-left: -4px;
+    display: inline-grid; place-items: center;
+    color: #fff; font-size: 10px;
+  }
+  .social-stats .dot-icons span:first-child { margin-left: 0; background: #0A66C2; }
+  .social-stats .dot-icons span:nth-child(2) { background: #E73357; }
+  .social-stats .dot-icons span:nth-child(3) { background: #F5BB5C; color: #444; }
+  .social-actions { display: inline-flex; gap: 1rem; }
+  .social-actions span { display: inline-flex; align-items: center; gap: .35rem; }
+
+  .social-foot-cta {
+    margin-top: var(--gap-md);
+    text-align: center;
+  }
+
+  @media (max-width: 1100px) { .social-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px)  { .social-grid { grid-template-columns: 1fr; } }
+
+  /* ============ PRICING ============ */
+  .pricing { background: var(--bg-secondary-accent); }
+  .pricing-head { text-align: center; max-width: 44rem; margin: 0 auto var(--gap-md); }
+  .pricing-head .small-tag { display: inline-flex; }
+  .pricing-grid {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--gap-xs);
+    align-items: stretch;
+  }
+  .price-card {
+    background: #fff;
+    border-radius: var(--radius-xs);
+    padding: 2.4rem 1.85rem;
+    display: flex; flex-direction: column; gap: var(--gap-sm);
+  }
+  .price-card.dark {
+    background: var(--bg-primary);
+    color: var(--text-inverse);
+    padding-top: 3.2rem; padding-bottom: 3.2rem;
+    box-shadow: 0 6px 50px #70736b3a;
+    position: relative;
+  }
+  .price-card.dark h3, .price-card.dark .price { color: var(--text-inverse); }
+  .price-card.dark .price-desc { color: var(--text-accent); }
+  .popular-tag {
+    position: absolute; top: 1.1rem; right: 1.1rem;
+    background: var(--bg-page); color: var(--text-primary);
+    padding: .35rem .85rem;
+    border-radius: 999px;
+    font-size: .68rem; font-weight: 600;
+    letter-spacing: .15rem; text-transform: uppercase;
+  }
+  .price-top { display: flex; flex-direction: column; gap: .55rem; }
+  .price-top h3 { font-size: 1.7rem; }
+  .price-desc { color: var(--text-secondary); font-size: .9rem; min-height: 2.6em; }
+  .price-card .btn { width: 100%; max-width: none; }
+  .price-row {
+    display: flex; align-items: baseline; gap: .5rem;
+    padding-top: var(--gap-xs);
+    border-top: 1px solid var(--border-soft);
+  }
+  .price-card.dark .price-row { border-color: var(--border-inverse-soft); }
+  .price-row .price { font-family: var(--serif); font-size: 2.7rem; line-height: 100%; }
+  .price-row small { font-size: .85rem; color: var(--text-secondary); }
+  .price-card.dark .price-row small { color: var(--text-accent); }
+  .price-list { display: flex; flex-direction: column; gap: .85rem; }
+  .price-list li {
+    display: flex; gap: .75rem; align-items: flex-start;
+    font-size: .9rem;
+  }
+  .tick {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--bg-primary); color: var(--text-inverse);
+    display: grid; place-items: center; flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .price-card.dark .tick { background: var(--text-inverse); color: var(--text-primary); }
+
+  @media (max-width: 991px) {
+    .pricing-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ============ FAQ ACCORDION ============ */
+  .faq { background: var(--bg-page); padding: var(--gap-xl) 0; }
+  .faq-head { text-align: center; max-width: 36rem; margin: 0 auto var(--gap-md); }
+  .faq-head .small-tag { display: inline-flex; }
+  .faq-list { max-width: 50rem; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
+  .faq-item {
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .faq-q {
+    width: 100%;
+    text-align: left;
+    padding: 1.6rem 0;
+    display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    background: transparent;
+    transition: opacity .25s;
+  }
+  .faq-q:hover { opacity: .7; }
+  .faq-q .toggle {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--bg-primary); color: var(--text-inverse);
+    display: grid; place-items: center;
+    flex-shrink: 0;
+    transition: transform .35s ease;
+  }
+  .faq-item.open .faq-q .toggle { transform: rotate(45deg); }
+  .faq-a {
+    max-height: 0; overflow: hidden;
+    transition: max-height .5s ease, padding .35s ease;
+    color: var(--text-secondary);
+    font-size: .98rem;
+  }
+  .faq-item.open .faq-a {
+    max-height: 360px;
+    padding-bottom: 1.6rem;
+  }
+
+  /* ============ CONTACT ============ */
+  .contact { background: var(--bg-page); padding: var(--gap-xl) 0; }
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1.1fr; gap: var(--gap-md);
+    align-items: stretch;
+  }
+  .contact-image {
+    border-radius: var(--radius-xs);
+    overflow: hidden;
+    background: var(--bg-primary);
+    position: relative;
+    aspect-ratio: 4/5;
+  }
+  .contact-image img { width: 100%; height: 100%; object-fit: cover; opacity: .9; }
+  .contact-image .tag-on-image {
+    position: absolute; inset: auto 1rem 1rem 1rem;
+    background: var(--bg-secondary); padding: 1.25rem;
+    border-radius: 1rem;
+  }
+  .contact-image .tag-on-image p { color: var(--text-secondary); font-size: .9rem; }
+
+  .contact-form {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-xs);
+    padding: var(--gap-md);
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .field input, .field select, .field textarea {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--border-soft);
+    padding: 1rem 0;
+    font-family: var(--sans);
+    font-size: .95rem;
+    letter-spacing: .03rem;
+    color: var(--text-primary);
+    transition: border-color .3s;
+  }
+  .field input::placeholder, .field textarea::placeholder { color: var(--text-secondary); opacity: .65; }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline: none; border-color: var(--text-primary);
+  }
+  .field textarea { resize: vertical; min-height: 100px; }
+  .form-help { color: var(--text-secondary); font-size: .82rem; }
+
+  @media (max-width: 991px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+
+  /* ============ FOOTER ============ */
+  footer {
+    background: var(--bg-primary);
+    color: var(--text-inverse);
+    padding-top: var(--gap-xl);
+    overflow: hidden;
+  }
+  .footer-top {
+    max-width: var(--container-sm); margin: 0 auto;
+    padding: 0 var(--gap-sm) var(--gap-lg);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: var(--gap-md);
+    align-items: start;
+  }
+  .footer-top h2 { color: var(--text-inverse); max-width: 32rem; }
+  .footer-top p { color: var(--text-accent); margin-top: var(--gap-xs); max-width: 28rem; }
+  .footer-cta-row { margin-top: var(--gap-md); }
+
+  .footer-col h6 {
+    font-family: var(--sans);
+    font-size: .72rem; font-weight: 600; letter-spacing: .15rem;
+    text-transform: uppercase;
+    color: var(--text-accent);
+    margin-bottom: var(--gap-sm);
+  }
+  .footer-col ul { display: flex; flex-direction: column; gap: .8rem; }
+  .footer-col a { color: var(--text-inverse); font-size: .94rem; transition: opacity .3s; }
+  .footer-col a:hover { opacity: .55; }
+
+  .footer-bottom {
+    border-top: 1px solid var(--border-inverse-soft);
+    padding: 1.5rem var(--gap-sm);
+    max-width: var(--container-sm); margin: 0 auto;
+    display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    color: var(--text-accent); font-size: .82rem;
+  }
+  .footer-socials { display: flex; gap: .65rem; }
+  .footer-socials a {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: #ffffff10;
+    border: 1px solid var(--border-inverse-soft);
+    display: grid; place-items: center;
+    transition: background .3s, color .3s;
+    color: var(--text-inverse);
+  }
+  .footer-socials a:hover { background: var(--text-inverse); color: var(--text-primary); }
+
+  .footer-bigtext {
+    font-family: var(--sans);
+    color: var(--text-inverse);
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 100%;
+    letter-spacing: -.025em;
+    font-size: clamp(40px, 14.7vw, 240px);
+    text-align: center;
+    padding: 0 1rem;
+    margin-bottom: -1.5vw;
+    opacity: .14;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 991px) {
+    .footer-top { grid-template-columns: 1fr; }
+  }
+
+  /* ============ NEWSLETTER (in footer) ============ */
+  .nl-box {
+    background: #ffffff10;
+    border: 1px solid var(--border-inverse-soft);
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex; gap: .5rem; max-width: 28rem;
+    margin-top: var(--gap-sm);
+  }
+  .nl-box input {
+    flex: 1; background: transparent; border: 0;
+    color: var(--text-inverse);
+    padding: .5rem .75rem;
+    font-family: inherit; font-size: .9rem;
+  }
+  .nl-box input::placeholder { color: var(--text-accent); }
+  .nl-box input:focus { outline: none; }
+  .nl-btn {
+    padding: .65rem 1.25rem;
+    background: var(--text-inverse);
+    color: var(--text-primary);
+    border-radius: 999px;
+    font-size: .75rem; font-weight: 600;
+    letter-spacing: .12rem; text-transform: uppercase;
+    transition: background .25s;
+  }
+  .nl-btn:hover { background: #fff; }
+
+  /* ============ DEMO NOTES (PDF-style annotations) ============ */
+  section, footer { position: relative; }
+  .hero { position: relative; }
+
+  .demo-note {
+    position: absolute;
+    top: 1.5rem; right: 1.5rem;
+    z-index: 50;
+  }
+  .hero .demo-note { top: 5.5rem; }
+  footer .demo-note { top: 2rem; }
+
+  .note-pin {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: #FFD24A;
+    color: #2A1F00;
+    font-family: var(--serif);
+    font-size: .85rem;
+    font-weight: 400;
+    border: 1.5px solid #2A1F00;
+    cursor: pointer;
+    box-shadow: 0 5px 14px #2A1F0035, inset 0 -2px 4px #00000010;
+    transition: transform .3s cubic-bezier(.5,1.6,.4,1);
+    display: grid; place-items: center;
+    line-height: 1;
+    position: relative;
+  }
+  .note-pin::before {
+    content: ""; position: absolute; inset: -3px;
+    border-radius: 50%;
+    background: #FFD24A60;
+    z-index: -1;
+    animation: pulse 2.4s ease-out infinite;
+  }
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: .8; }
+    100% { transform: scale(1.45); opacity: 0; }
+  }
+  .note-pin:hover { transform: scale(1.12) rotate(-6deg); }
+
+  .note-popup {
+    position: absolute;
+    top: calc(100% + .85rem);
+    right: 0;
+    width: 320px;
+    max-height: 380px;
+    overflow-y: auto;
+    background: #FFF4C9;
+    background-image: linear-gradient(180deg, #FFF4C9 0%, #FFEDA0 100%);
+    border: 1px solid #2A1F0026;
+    border-radius: 6px;
+    padding: 1.1rem 1.15rem 1.2rem;
+    box-shadow: 0 16px 42px #2A1F0030, 0 2px 4px #2A1F0014;
+    font-family: var(--sans);
+    font-size: .85rem;
+    color: #2A1F00;
+    opacity: 0;
+    transform: translateY(-6px) scale(.96);
+    transform-origin: top right;
+    pointer-events: none;
+    transition: opacity .22s ease, transform .22s ease;
+  }
+  .note-popup.open {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+  .note-popup::before {
+    content: ""; position: absolute;
+    top: -7px; right: 14px;
+    width: 14px; height: 14px;
+    background: #FFF4C9;
+    border-top: 1px solid #2A1F0026;
+    border-left: 1px solid #2A1F0026;
+    transform: rotate(45deg);
+  }
+  .note-popup-head {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: .55rem;
+    padding-bottom: .55rem;
+    border-bottom: 1px dashed #2A1F0030;
+  }
+  .note-num {
+    font-size: .65rem;
+    letter-spacing: .14rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #2A1F00AA;
+  }
+  .note-close {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: transparent;
+    border: 0;
+    color: #2A1F00;
+    font-size: 1.05rem;
+    line-height: 1;
+    display: grid; place-items: center;
+    cursor: pointer;
+    transition: background .2s;
+  }
+  .note-close:hover { background: #2A1F0014; }
+  .note-popup h6 {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    line-height: 125%;
+    margin-bottom: .65rem;
+    color: #2A1F00;
+    font-weight: 400;
+  }
+  .note-popup p {
+    margin-bottom: .55rem;
+    line-height: 1.5;
+    font-size: .82rem;
+    color: #2A1F00DD;
+  }
+  .note-popup p:last-child { margin-bottom: 0; }
+  .note-popup .effect {
+    margin-top: .65rem;
+    padding-top: .65rem;
+    border-top: 1px dashed #2A1F0030;
+  }
+  .note-popup .effect strong {
+    display: block;
+    font-size: .7rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    color: #2A1F00AA;
+    margin-bottom: .25rem;
+  }
+
+  /* Demo toggle — fixed corner */
+  .demo-toggle {
+    position: fixed;
+    bottom: 1.25rem; right: 1.25rem;
+    z-index: 998;
+    padding: .85rem 1.25rem;
+    background: var(--text-primary);
+    color: var(--text-inverse);
+    font-family: var(--sans);
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .14rem;
+    text-transform: uppercase;
+    border-radius: 999px;
+    box-shadow: 0 12px 28px #0E1B354d;
+    display: inline-flex; align-items: center; gap: .55rem;
+    cursor: pointer;
+    transition: transform .25s, box-shadow .25s;
+  }
+  .demo-toggle:hover { transform: translateY(-2px); box-shadow: 0 16px 36px #0E1B3566; }
+  .demo-toggle .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #FFD24A;
+    box-shadow: 0 0 0 3px #FFD24A33;
+  }
+  body.demo-off .demo-note { display: none; }
+  body.demo-off .demo-toggle .dot { background: #888; box-shadow: none; }
+
+  @media (max-width: 768px) {
+    .note-popup { width: 280px; right: -8px; }
+    .demo-toggle { font-size: .65rem; padding: .7rem 1rem; }
+  }
+
+  /* ============ REVEAL ============ */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s ease, transform .9s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .delay-1 { transition-delay: .1s; }
+  .delay-2 { transition-delay: .2s; }
+  .delay-3 { transition-delay: .3s; }
+</style>
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-mark">M</span>
+      <span>Power Up</span>
+    </a>
+    <div class="nav-links">
+      <a href="#about">À propos</a>
+      <a href="#methode">Méthode</a>
+      <a href="#cas">Cas clients</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="#contact" class="nav-cta-wrap"><span>Réserver mon appel</span></a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="demo-note">
+    <button class="note-pin" aria-label="Note 1">1</button>
+    <div class="note-popup">
+      <div class="note-popup-head">
+        <span class="note-num">N° 01 — Hero</span>
+        <button class="note-close" aria-label="Fermer">×</button>
+      </div>
+      <h6>La promesse en 3 secondes</h6>
+      <p>L'audit Komo a relevé une USP floue sur la page actuelle. Ici on prend l'inverse&nbsp;: un hook ultra-ciblé «&nbsp;cadres en remise en question&nbsp;» + une promesse-action «&nbsp;transformer le doute en stratégie&nbsp;». Le persona se reconnaît avant le scroll.</p>
+      <div class="effect">
+        <strong>Effet attendu</strong>
+        <p>+20&nbsp;% de scroll-down et +18&nbsp;% de clics sur le CTA appel découverte vs hero générique.</p>
+      </div>
+    </div>
+  </div>
+  <div class="hero-bg"></div>
+  <img class="hero-image" src="img/maryam-portrait.jpg" alt="Maryam Housni, coach professionnelle certifiée HEC Paris">
+  <div class="hero-image-tint"></div>
+  <div class="hero-main">
+    <div class="hero-content reveal in">
+      <span class="small-tag inverse">Coaching exécutif — certifiée HEC Paris</span>
+      <h1>Transformez votre doute <em>en</em> stratégie précise.</h1>
+      <p>Power Coaching, pour les cadres et dirigeants en pleine remise en question. Un accompagnement sans limite, calé sur votre tempo — pas sur un forfait de séances.</p>
+      <div class="hero-button-wrapper">
+        <a class="btn inverse" href="#contact"><span>Réserver mon appel</span></a>
+        <a class="hero-link-soft" href="#cas">
+          Voir les cas clients
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-meta">
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+      30 min · gratuit
+    </span>
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+      Sans engagement
+    </span>
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+      Réponse sous 24 h
+    </span>
+  </div>
+  <div class="hero-big-text">M&nbsp;Power&nbsp;Up</div>
+</header>
+
+<!-- ============ COUNTERS ============ -->
+<section class="counters">
+  <div class="demo-note">
+    <button class="note-pin" aria-label="Note 2">2</button>
+    <div class="note-popup">
+      <div class="note-popup-head">
+        <span class="note-num">N° 02 — Compteurs</span>
+        <button class="note-close" aria-label="Fermer">×</button>
+      </div>
+      <h6>Crédibilité chiffrée</h6>
+      <p>4 chiffres scannables qui ancrent la légitimité avant l'argumentaire. C'est le filtre de confiance n°&nbsp;1 juste après le hero.</p>
+      <div class="effect">
+        <strong>Effet attendu</strong>
+        <p>Réduit le taux de rebond d'environ 12&nbsp;% sur cette zone critique.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="counters-grid reveal">
+      <div class="counters-head">
+        <span class="small-tag">Les chiffres</span>
+        <h2>Un accompagnement éprouvé sur des centaines de transitions.</h2>
+      </div>
+      <div>
+        <div class="counter-num"><span class="counter" data-target="150">0</span><small>+</small></div>
+        <div class="counter-label">Cadres accompagnés depuis 2017</div>
+      </div>
+      <div class="vert-divider"></div>
+      <div>
+        <div class="counter-num"><span class="counter" data-target="94">0</span>%</div>
+        <div class="counter-label">Satisfaction client moyenne</div>
+      </div>
+      <div class="vert-divider"></div>
+      <div>
+        <div class="counter-num"><span class="counter" data-target="89">0</span>%</div>
+        <div class="counter-label">Transitions réalisées en moins de 6 mois</div>
+      </div>
+      <div class="vert-divider"></div>
+      <div>
+        <div class="counter-num"><span class="counter" data-target="15">0</span><small>&nbsp;ans</small></div>
+        <div class="counter-label">D'expérience leadership &amp; coaching</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MANIFESTO ============ -->
+<section class="manifesto">
+  <div class="demo-note">
+    <button class="note-pin" aria-label="Note 3">3</button>
+    <div class="note-popup">
+      <div class="note-popup-head">
+        <span class="note-num">N° 03 — Manifesto</span>
+        <button class="note-close" aria-label="Fermer">×</button>
+      </div>
+      <h6>Pause narrative & vision</h6>
+      <p>Bandeau sombre qui rompt avec le ton marketing. Tu sors du pitch pour incarner une conviction née de ton parcours personnel. C'est l'ancre émotionnelle de la page.</p>
+      <div class="effect">
+        <strong>Effet attendu</strong>
+        <p>+temps passé sur la page et préparation émotionnelle au pricing premium.</p>
+      </div>
+    </div>
+  </div>
+  <div class="manifesto-main reveal">
+    <h2>Ma méthode ne ressemble à aucune autre. <em>Elle est née de ma propre reconversion.</em></h2>
+    <div>
+      <p>Pendant 15 ans, j'ai vu des cadres brillants rester bloqués dans des décisions qu'ils n'arrivaient pas à prendre. Le Power Coaching est ma réponse : un accompagnement sans agenda, sans limite de séances, calé sur le tempo réel de votre transformation.</p>
+      <div style="max-width: 18rem;">
+        <a class="btn inverse" href="#about"><span>Découvrir Maryam</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE — écoles / secteurs ============ -->
+<section class="clients">
+  <div class="demo-note">
+    <button class="note-pin" aria-label="Note 4">4</button>
+    <div class="note-popup">
+      <div class="note-popup-head">
+        <span class="note-num">N° 04 — Marquee écoles</span>
+        <button class="note-close" aria-label="Fermer">×</button>
+      </div>
+      <h6>Signal de niveau</h6>
+      <p>Les écoles d'origine de tes clients défilent en continu. Sous-entendu : tu joues dans cette ligue. Le visiteur se positionne — ou comprend qu'il n'est pas la cible.</p>
+      <div class="effect">
+        <strong>Effet attendu</strong>
+        <p>Auto-qualification : les bons leads continuent, les mauvais s'écartent (c'est ce qu'on veut).</p>
+      </div>
+    </div>
+  </div>
+  <p class="clients-info">Cadres accompagnés issus de</p>
+  <div class="marquee-wrapper">
+    <div class="marquee-train">
+      <span class="marquee-text">HEC Paris</span>
+      <span class="marquee-text">ESSEC</span>
+      <span class="marquee-text">Sciences Po</span>
+      <span class="marquee-text">EDHEC</span>
+      <span class="marquee-text">Mines ParisTech</span>
+      <span class="marquee-text">Polytechnique</span>
+      <span class="marquee-text">Centrale</span>
+      <span class="marquee-text">ESCP</span>
+      <span class="marquee-text">HEC Paris</span>
+      <span class="marquee-text">ESSEC</span>
+      <span class="marquee-text">Sciences Po</span>
+      <span class="marquee-text">EDHEC</span>
+      <span class="marquee-text">Mines ParisTech</span>
+      <span class="marquee-text">Polytechnique</span>
+      <span class="marquee-text">Centrale</span>
+      <span class="marquee-text">ESCP</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MÉTHODE / SERVICES ============ -->
+<section class="services" id="methode">
+  <div class="demo-note">
+    <button class="note-pin" aria-label="Note 5">5</button>
+    <div class="note-popup">
+      <div class="note-popup-head">
+        <span class="note-num">N° 05 — Méthode</span>
+        <button class="note-close" aria-label="Fermer">×</button>
+      </div>
+      <h6>Différenciation produit</h6>
+      <p>Les 4 piliers du Power Coaching, formulés en bénéfices tangibles (illimité, perso, HEC, flexible). On répond à l'objection «&nbsp;encore un coach lambda&nbsp;» avant qu'elle se pose.</p>
+      <div class="effect">
+        <strong>Effet attendu</strong>
+        <p>Lève l'objection produit, prépare le clic vers Cas clients.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="left">
+        <span class="small-tag">La méthode Power Coaching</span>
+        <h2>Quatre piliers conçus pour les transitions à fort enjeu.</h2>
+      </div>
+      <div class="right">
+        <p>Là où la plupart des coachs vendent un nombre fini de séances, le Power Coaching est calé sur votre rythme. Voici ce qui change concrètement pour vous.</p>
+      </div>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="num">01</div>
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h4>Accès illimité</h4>
+        <p>Réservez autant de séances que votre transformation l'exige. Aucun forfait, aucune jauge à surveiller.</p>
+      </div>
+      <div class="service-card reveal delay-1">
+        <div class="num">02</div>
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2z"/></svg></div>
+        <h4>Personnalisation totale</h4>
+        <p>Chaque séance est conçue pour votre cas. Pas de framework fourre-tout, pas d'exercices génériques.</p>
+      </div>
+      <div class="service-card reveal delay-2">
+        <div class="num">03</div>
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <h4>Expertise HEC Paris</h4>
+        <p>Certification HEC Paris + 15 ans d'expérience leadership. Vous parlez à une pair, pas à une généraliste.</p>
+      </div>
+      <div class="service-card reveal delay-3">
+        <div class="num">04</div>
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12a9 9 0 1 0 9-9"/><polyline points="3 4 3 12 11 12"/></svg></div>
+        <h4>Flexibilité réelle</h4>
+        <p>Présentiel à Paris, visio, créneaux du soir : votre carrière ne s'arrête pas, votre coaching non plus.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAS CLIENTS — UNFOLD ON HOVER ============ -->
+<section class="cases" id="cas">
+  <div class="demo-note">
+    <button class="note-pin" aria-label="Note 6">6</button>
+    <div class="note-popup">
+      <div class="note-popup-head">
+        <span class="note-num">N° 06 — Cas clients</span>
+        <button class="note-close" aria-label="Fermer">×</button>
+      </div>
+      <h6>Preuve par l'exemple</h6>
+      <p>Cartes interactives qui se déplient au hover&nbsp;: avant/après chiffré pour 4 personas-types. Le prospect se projette dans un cas similaire au sien.</p>
+      <div class="effect">
+        <strong>Effet attendu</strong>
+        <p>+35&nbsp;% d'engagement (hover) et passage direct vers Tarifs/FAQ.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="left">
+        <span class="small-tag">Cas clients</span>
+        <h2>De vraies transitions, de vraies décisions.</h2>
+      </div>
+      <div class="right">
+        <p>Survolez chaque carte pour découvrir le contexte, le secteur et le délai. Tous les prénoms ont été modifiés.</p>
+      </div>
+    </div>
+
+    <div class="cases-grid">
+      <article class="case-card reveal">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1573497019418-b400bb3ab074?w=900&h=700&fit=crop" alt=""></div>
+        <div class="case-content">
+          <div class="case-tag">Reconversion stratégique</div>
+          <h4>Anne a clarifié son projet en 4 semaines, après 18 mois de doute.</h4>
+          <div class="case-details">
+            <div class="case-detail-row"><span class="lbl">Profil :</span><span class="val">Directrice marketing, finance</span></div>
+            <div class="case-detail-row"><span class="lbl">Enjeu :</span><span class="val">Quitter le CAC 40 pour l'impact</span></div>
+            <div class="case-detail-row"><span class="lbl">Format :</span><span class="val">Power 30 jours</span></div>
+            <div class="case-detail-row"><span class="lbl">Résultat :</span><span class="val">Lettre de mission signée</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case-card reveal delay-1">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=900&h=700&fit=crop" alt=""></div>
+        <div class="case-content">
+          <div class="case-tag">Transition de poste</div>
+          <h4>Mathieu a négocié son passage Codir sans rupture brutale.</h4>
+          <div class="case-details">
+            <div class="case-detail-row"><span class="lbl">Profil :</span><span class="val">Directeur opérations, industrie</span></div>
+            <div class="case-detail-row"><span class="lbl">Enjeu :</span><span class="val">Repositionnement interne</span></div>
+            <div class="case-detail-row"><span class="lbl">Format :</span><span class="val">Power 90 jours</span></div>
+            <div class="case-detail-row"><span class="lbl">Résultat :</span><span class="val">Promotion + +22% rémunération</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case-card reveal delay-2">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=900&h=700&fit=crop" alt=""></div>
+        <div class="case-content">
+          <div class="case-tag">Sortie de burn-out</div>
+          <h4>Sophie est revenue au travail, mais à ses conditions.</h4>
+          <div class="case-details">
+            <div class="case-detail-row"><span class="lbl">Profil :</span><span class="val">Manager senior, conseil</span></div>
+            <div class="case-detail-row"><span class="lbl">Enjeu :</span><span class="val">Reprise post arrêt long</span></div>
+            <div class="case-detail-row"><span class="lbl">Format :</span><span class="val">Power illimité, 5 mois</span></div>
+            <div class="case-detail-row"><span class="lbl">Résultat :</span><span class="val">Nouveau rôle, nouveau cadre</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case-card reveal delay-3">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?w=900&h=700&fit=crop" alt=""></div>
+        <div class="case-content">
+          <div class="case-tag">Lancement entrepreneurial</div>
+          <h4>Élodie a quitté son CDI pour lancer son cabinet.</h4>
+          <div class="case-details">
+            <div class="case-detail-row"><span class="lbl">Profil :</span><span class="val">DRH grand groupe</span></div>
+            <div class="case-detail-row"><span class="lbl">Enjeu :</span><span class="val">Passer du salariat à l'indépendance</span></div>
+            <div class="case-detail-row"><span class="lbl">Format :</span><span class="val">Power 90 jours + suivi</span></div>
+            <div class="case-detail-row"><span class="lbl">Résultat :</span><span class="val">3 premiers clients en 60 jours</span></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ POUR QUI (3 niches) ============ -->
+<section class="niches">
+  <div class="demo-note">
+    <button class="note-pin" aria-label="Note 7">7</button>
+    <div class="note-popup">
+      <div class="note-popup-head">
+        <span class="note-num">N° 07 — Pour qui</span>
+        <button class="note-close" aria-label="Fermer">×</button>
+      </div>
+      <h6>Auto-qualification persona</h6>
+      <p>L'audit Komo recommandait 3 niches explicites. On les nomme noir sur blanc&nbsp;: le bon prospect dit «&nbsp;c'est moi&nbsp;», le mauvais s'écarte. Le tri se fait avant l'appel.</p>
+      <div class="effect">
+        <strong>Effet attendu</strong>
+        <p>Meilleure qualité d'appels découverte (pas plus de quantité).</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="left">
+        <span class="small-tag">Est-ce pour vous ?</span>
+        <h2>Trois profils, une même exigence.</h2>
+      </div>
+      <div class="right">
+        <p>Je n'accompagne pas tout le monde. Le Power Coaching est calibré pour celles et ceux qui ont déjà un parcours derrière eux et beaucoup à perdre dans une décision mal prise.</p>
+      </div>
+    </div>
+
+    <div class="niches-grid">
+      <div class="niche reveal">
+        <div class="img-wrap"><img src="img/maryam-3.jpg" alt=""></div>
+        <h4>Cadres en reconversion</h4>
+        <p>Vous avez 10–25 ans de carrière, un CV solide, mais vous savez que ce poste-là n'est plus le bon. Vous cherchez une bascule lucide, pas un saut dans le vide.</p>
+        <ul>
+          <li>Vous tournez en rond depuis 6 mois ou plus</li>
+          <li>Vous avez besoin d'un avis qui ne vous flatte pas</li>
+          <li>Votre prochain mouvement engage les 5 prochaines années</li>
+        </ul>
+      </div>
+
+      <div class="niche reveal delay-1">
+        <div class="img-wrap"><img src="img/maryam-1.jpg" alt=""></div>
+        <h4>Femmes leaders post-40</h4>
+        <p>Vous êtes arrivée à un poste de pouvoir et vous voulez choisir la suite. Pas la subir. Parce qu'à votre niveau, les conseils génériques ne suffisent plus.</p>
+        <ul>
+          <li>Plafond de verre, plafond de vie ou plafond de sens</li>
+          <li>Vous voulez une interlocutrice qui comprend les codes</li>
+          <li>Vous cherchez une vision long terme, pas une astuce</li>
+        </ul>
+      </div>
+
+      <div class="niche reveal delay-2">
+        <div class="img-wrap"><img src="img/maryam-9.jpg" alt=""></div>
+        <h4>Entrepreneurs en doute</h4>
+        <p>Vous avez l'idée, le réseau, parfois même les premiers clients. Mais le passage à l'acte coince. Le coaching, ici, sert à tester votre projet contre la réalité.</p>
+        <ul>
+          <li>Vous oscillez entre lancement et statu quo</li>
+          <li>Votre entourage n'est pas un sparring-partner objectif</li>
+          <li>Vous voulez décider en toute conscience</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT MARYAM ============ -->
+<section class="about-maryam" id="about">
+  <div class="demo-note">
+    <button class="note-pin" aria-label="Note 8">8</button>
+    <div class="note-popup">
+      <div class="note-popup-head">
+        <span class="note-num">N° 08 — À propos</span>
+        <button class="note-close" aria-label="Fermer">×</button>
+      </div>
+      <h6>Incarnation premium</h6>
+      <p>Bio narrative + portrait + citation. Pas un CV, une histoire. On crée le rapport humain qui justifie le tarif premium et différencie d'un coach interchangeable.</p>
+      <div class="effect">
+        <strong>Effet attendu</strong>
+        <p>Augmente la conversion sur les paliers Power 90&nbsp;jours et Illimité.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="about-maryam-grid">
+      <div class="about-photo reveal">
+        <img src="img/maryam-portrait.jpg" alt="Maryam Housni">
+        <div class="badge">
+          <div class="seal">M</div>
+          <div>
+            <strong>Maryam Housni</strong>
+            <span>Fondatrice — Coach exécutif certifiée HEC Paris</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-text reveal delay-1">
+        <span class="small-tag">À propos</span>
+        <h2>J'ai vécu ma propre reconversion. C'est de là que vient ma méthode.</h2>
+        <p>Avant de fonder M Power Up, j'ai passé plus de quinze ans dans des fonctions de direction — leadership d'équipes, projets internationaux, transformations exigeantes. J'ai aussi traversé ma propre bascule, sans filet et sans coach, et j'ai vu le coût de chaque mauvaise décision prise dans le doute.</p>
+        <p>Aujourd'hui, j'accompagne celles et ceux qui veulent éviter ces années perdues. Mon approche n'est pas celle d'une formatrice qui déroule un programme : c'est celle d'une pair qui prend le temps de comprendre votre cas, qui vous tient en responsabilité et qui ose les questions que personne d'autre ne pose.</p>
+        <div class="highlight">
+          « Le coaching ne change pas votre vie. C'est <em>vous</em> qui changez votre vie. Mon rôle, c'est de rendre cette décision possible — et de la rendre plus rapide. »
+        </div>
+        <div class="about-cta-row">
+          <a class="btn" href="#contact"><span>Réserver mon appel</span></a>
+          <a class="btn" href="#tarifs" style="border-color:transparent;"><span>Voir les tarifs</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CREDENTIALS ============ -->
+<section class="creds" id="credentials">
+  <div class="demo-note">
+    <button class="note-pin" aria-label="Note 9">9</button>
+    <div class="note-popup">
+      <div class="note-popup-head">
+        <span class="note-num">N° 09 — Credentials</span>
+        <button class="note-close" aria-label="Fermer">×</button>
+      </div>
+      <h6>Réassurance technique</h6>
+      <p>Le coaching n'est pas un métier réglementé en France. Sceau HEC officiel + 4 accréditations vérifiables. On lève l'objection «&nbsp;à quoi reconnaît-on un vrai coach&nbsp;?&nbsp;» en 5 secondes.</p>
+      <div class="effect">
+        <strong>Effet attendu</strong>
+        <p>Critère de tri n°&nbsp;1 pour la cible HEC. -50&nbsp;% des questions credentials en appel.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="creds-head reveal">
+      <div>
+        <span class="small-tag">Credentials</span>
+        <h2>Une crédibilité qui se vérifie ligne par ligne.</h2>
+      </div>
+      <div class="creds-head-right">
+        <p>Le coaching n'est pas un métier réglementé en France. Avant de confier votre transition à quelqu'un, exigez les preuves. Voici les miennes.</p>
+        <a href="https://www.hec.edu/en/executive-education/coach-professionnel" target="_blank" rel="noopener" class="creds-badge-wrap">
+          <img src="img/coaching-hec.jpg" alt="Coachs Certifiés HEC Executive Coaching">
+          <div class="badge-meta">
+            <span class="lbl">Sceau officiel</span>
+            <strong>Coachs Certifiés HEC Executive Coaching</strong>
+            <span class="verif">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Vérifiable sur l'annuaire AICC-HEC Paris
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="creds-grid">
+
+      <div class="cred reveal">
+        <div class="cred-seal">HEC<small>PARIS</small></div>
+        <div class="cred-body">
+          <strong>Coach Professionnel HEC Paris</strong>
+          <span>Executive Certificate — 12 jours, campus de Jouy-en-Josas. Mémoire et démonstration de séance soutenus devant jury.</span>
+        </div>
+        <div class="cred-meta"><span>Promo 2018</span><span>Vérifiable</span></div>
+      </div>
+
+      <div class="cred reveal delay-1">
+        <div class="cred-seal">AICC</div>
+        <div class="cred-body">
+          <strong>AICC – HEC Paris</strong>
+          <span>Membre actif de l'Association Internationale des Coachs Certifiés HEC Paris. Supervision et codéveloppement continus.</span>
+        </div>
+        <div class="cred-meta"><span>Membre depuis 2018</span><span>Annuaire</span></div>
+      </div>
+
+      <div class="cred reveal delay-2">
+        <div class="cred-seal">ICF</div>
+        <div class="cred-body">
+          <strong>International Coaching Federation</strong>
+          <span>Membre ICF — accréditation niveau PCC (Professional Certified Coach). Engagement au code de déontologie ICF.</span>
+        </div>
+        <div class="cred-meta"><span>Niveau PCC</span><span>Code éthique</span></div>
+      </div>
+
+      <div class="cred reveal delay-3">
+        <div class="cred-seal">MBTI<small>® I/II</small></div>
+        <div class="cred-body">
+          <strong>MBTI® Step I &amp; II</strong>
+          <span>Praticien certifié — outils d'évaluation utilisés en complément du coaching pour cartographier les leviers de décision.</span>
+        </div>
+        <div class="cred-meta"><span>Certifiée 2019</span><span>The Myers-Briggs Co.</span></div>
+      </div>
+
+    </div>
+
+    <div class="creds-strip reveal">
+      <span style="display:inline-flex; align-items:center; gap:.6rem;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <strong>Supervision continue</strong> — sessions trimestrielles avec une superviseure ICF Master Certified Coach.
+      </span>
+      <span style="display:inline-flex; align-items:center; gap:.6rem;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <strong>+1 200 heures coachées</strong> — depuis 2018, en présentiel et à distance.
+      </span>
+      <span style="display:inline-flex; align-items:center; gap:.6rem;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <strong>RGPD &amp; confidentialité</strong> — clause de confidentialité signée systématique.
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TÉMOIGNAGES ============ -->
+<section class="testi" id="temoignages">
+  <div class="demo-note">
+    <button class="note-pin" aria-label="Note 10">10</button>
+    <div class="note-popup">
+      <div class="note-popup-head">
+        <span class="note-num">N° 10 — Témoignages</span>
+        <button class="note-close" aria-label="Fermer">×</button>
+      </div>
+      <h6>Social proof ciblée</h6>
+      <p>Slider sur fond sombre. Chaque témoignage adresse le pain point d'un persona précis (reconversion, Codir, burn-out, lancement). Pas de citations génériques.</p>
+      <div class="effect">
+        <strong>Effet attendu</strong>
+        <p>Prospect identifié = +25&nbsp;% de conversion vers le formulaire.</p>
+      </div>
+    </div>
+  </div>
+  <div class="testi-container">
+    <div class="testi-top reveal">
+      <span class="small-tag inverse">Témoignages</span>
+      <h2>Ce qu'en disent celles et ceux qui ont franchi le pas.</h2>
+    </div>
+
+    <div class="testi-slider">
+      <div class="testi-slide active">
+        <blockquote>« Maryam pose les questions qu'on évite tout seul. En quatre semaines, j'avais tranché. Six mois plus tard, ma décision tient toujours. »</blockquote>
+        <div class="testi-author">
+          <div class="avatar">A</div>
+          <div class="who"><strong>Anne D.</strong><span>Directrice marketing — secteur finance</span></div>
+        </div>
+      </div>
+      <div class="testi-slide">
+        <blockquote>« J'ai testé deux coachs avant. Aucun ne comprenait ma réalité de Codir. Avec Maryam, on parlait la même langue dès la première séance. »</blockquote>
+        <div class="testi-author">
+          <div class="avatar">M</div>
+          <div class="who"><strong>Mathieu R.</strong><span>Directeur opérations — industrie</span></div>
+        </div>
+      </div>
+      <div class="testi-slide">
+        <blockquote>« Après mon burn-out, j'avais peur de retomber. Maryam m'a aidée à reconstruire un cadre que je tiens vraiment. »</blockquote>
+        <div class="testi-author">
+          <div class="avatar">S</div>
+          <div class="who"><strong>Sophie L.</strong><span>Manager senior — conseil</span></div>
+        </div>
+      </div>
+      <div class="testi-slide">
+        <blockquote>« Le format illimité change tout. Pas de pression à "rentabiliser" la séance, on travaille au bon rythme. »</blockquote>
+        <div class="testi-author">
+          <div class="avatar">É</div>
+          <div class="who"><strong>Élodie B.</strong><span>Ex-DRH — fondatrice de cabinet</span></div>
+        </div>
+      </div>
+      <div class="testi-slide">
+        <blockquote>« J'attendais qu'on me dise quoi faire. Maryam m'a appris à décider. C'est plus précieux que n'importe quel plan. »</blockquote>
+        <div class="testi-author">
+          <div class="avatar">T</div>
+          <div class="who"><strong>Thomas K.</strong><span>Directeur produit — tech</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-controls">
+      <button id="tprev" aria-label="Précédent"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
+      <button id="tnext" aria-label="Suivant"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOCIAL / LINKEDIN ============ -->
+<section class="social" id="linkedin">
+  <div class="demo-note">
+    <button class="note-pin" aria-label="Note 11">11</button>
+    <div class="note-popup">
+      <div class="note-popup-head">
+        <span class="note-num">N° 11 — LinkedIn</span>
+        <button class="note-close" aria-label="Fermer">×</button>
+      </div>
+      <h6>Autorité éditoriale</h6>
+      <p>Tes derniers posts en carrousel. Tu produis de la pensée, pas que du service. On capture le visiteur pas prêt à acheter via le suivi LinkedIn.</p>
+      <div class="effect">
+        <strong>Effet attendu</strong>
+        <p>Active le canal de remarketing organique LinkedIn sur 3-6 mois.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="left">
+        <span class="small-tag">Sur LinkedIn</span>
+        <h2>Une réflexion par semaine, sans détour.</h2>
+      </div>
+      <div class="right" style="display:flex; flex-direction:column; gap: var(--gap-sm); align-items: flex-start;">
+        <p>Mes derniers posts — coulisses des séances, retours d'expérience clients (anonymisés) et idées brutes sur la reconversion. Suivez-moi pour ne rien rater.</p>
+        <div class="social-controls">
+          <button id="socialPrev" aria-label="Précédent" disabled><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
+          <button id="socialNext" aria-label="Suivant"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="social-carousel">
+      <div class="social-track" id="socialTrack">
+
+      <!-- POST 1 -->
+      <article class="social-card reveal">
+        <div class="social-card-head">
+          <div class="social-avatar"><img src="img/maryam-portrait.jpg" alt="Maryam Housni"></div>
+          <div class="social-author">
+            <strong>Maryam Housni</strong>
+            <span>Coach exécutif certifiée HEC Paris</span>
+            <div class="meta">il y a 2 j · <span style="display:inline;">🌍</span></div>
+          </div>
+          <div class="social-li-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          </div>
+        </div>
+        <div class="social-body">
+          <p><strong>« Je veux changer, mais pas perdre ce que j'ai construit. »</strong></p>
+          <p>Cette phrase, je l'entends presque chaque semaine. Elle cache rarement une peur du changement. Elle cache une peur de gâcher.</p>
+          <p class="read-more">… voir plus</p>
+        </div>
+        <div class="social-img"><img src="img/maryam-3.jpg" alt=""></div>
+        <div class="social-foot">
+          <span class="social-stats">
+            <span class="dot-icons"><span>👍</span><span>❤</span><span>💡</span></span>
+            247
+          </span>
+          <span class="social-actions">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              38
+            </span>
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+              12
+            </span>
+          </span>
+        </div>
+      </article>
+
+      <!-- POST 2 -->
+      <article class="social-card reveal delay-1">
+        <div class="social-card-head">
+          <div class="social-avatar"><img src="img/maryam-portrait.jpg" alt="Maryam Housni"></div>
+          <div class="social-author">
+            <strong>Maryam Housni</strong>
+            <span>Coach exécutif certifiée HEC Paris</span>
+            <div class="meta">il y a 5 j · <span style="display:inline;">🌍</span></div>
+          </div>
+          <div class="social-li-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          </div>
+        </div>
+        <div class="social-body">
+          <p><strong>La Défense, 19h. Vous repartez encore une fois en vous disant « demain je tranche ».</strong></p>
+          <p>Demain, c'est dans deux ans. Et entre-temps, votre énergie part dans des décisions que vous ne prenez pas.</p>
+          <p class="read-more">… voir plus</p>
+        </div>
+        <div class="social-img"><img src="img/maryam-7.jpg" alt=""></div>
+        <div class="social-foot">
+          <span class="social-stats">
+            <span class="dot-icons"><span>👍</span><span>❤</span><span>💡</span></span>
+            418
+          </span>
+          <span class="social-actions">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              62
+            </span>
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+              28
+            </span>
+          </span>
+        </div>
+      </article>
+
+      <!-- POST 3 -->
+      <article class="social-card reveal delay-2">
+        <div class="social-card-head">
+          <div class="social-avatar"><img src="img/maryam-portrait.jpg" alt="Maryam Housni"></div>
+          <div class="social-author">
+            <strong>Maryam Housni</strong>
+            <span>Coach exécutif certifiée HEC Paris</span>
+            <div class="meta">il y a 1 sem · <span style="display:inline;">🌍</span></div>
+          </div>
+          <div class="social-li-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          </div>
+        </div>
+        <div class="social-body">
+          <p><strong>Promo terminée. 14 cadres, 14 trajectoires.</strong></p>
+          <p>Pas un seul n'a pris la décision qu'il pensait prendre en arrivant. C'est exactement pour ça qu'on bosse ensemble.</p>
+          <p class="read-more">… voir plus</p>
+        </div>
+        <div class="social-img"><img src="img/maryam-9.jpg" alt=""></div>
+        <div class="social-foot">
+          <span class="social-stats">
+            <span class="dot-icons"><span>👍</span><span>❤</span><span>💡</span></span>
+            612
+          </span>
+          <span class="social-actions">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              94
+            </span>
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+              41
+            </span>
+          </span>
+        </div>
+      </article>
+
+      <!-- POST 4 -->
+      <article class="social-card reveal delay-3">
+        <div class="social-card-head">
+          <div class="social-avatar"><img src="img/maryam-portrait.jpg" alt="Maryam Housni"></div>
+          <div class="social-author">
+            <strong>Maryam Housni</strong>
+            <span>Coach exécutif certifiée HEC Paris</span>
+            <div class="meta">il y a 2 sem · <span style="display:inline;">🌍</span></div>
+          </div>
+          <div class="social-li-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          </div>
+        </div>
+        <div class="social-body">
+          <p><strong>Atelier « Et si vous arrêtiez de vous justifier ? » — complet en 3 jours.</strong></p>
+          <p>Trois heures sans slide, sans framework. Juste la vraie question : qu'est-ce qui décide à votre place ?</p>
+          <p class="read-more">… voir plus</p>
+        </div>
+        <div class="social-img"><img src="img/maryam-1.jpg" alt=""></div>
+        <div class="social-foot">
+          <span class="social-stats">
+            <span class="dot-icons"><span>👍</span><span>❤</span><span>💡</span></span>
+            329
+          </span>
+          <span class="social-actions">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              47
+            </span>
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+              19
+            </span>
+          </span>
+        </div>
+      </article>
+
+      </div>
+      <div class="social-progress"><div class="social-progress-bar" id="socialProgress"></div></div>
+    </div>
+
+    <div class="social-foot-cta reveal">
+      <a class="btn" href="#" target="_blank" rel="noopener">
+        <span>Me suivre sur LinkedIn</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TARIFS ============ -->
+<section class="pricing" id="tarifs">
+  <div class="demo-note">
+    <button class="note-pin" aria-label="Note 12">12</button>
+    <div class="note-popup">
+      <div class="note-popup-head">
+        <span class="note-num">N° 12 — Tarifs</span>
+        <button class="note-close" aria-label="Fermer">×</button>
+      </div>
+      <h6>Transparence premium</h6>
+      <p>L'audit Komo le souligne&nbsp;: afficher les tarifs sur du high-ticket augmente la confiance. Le 90 jours en avant, l'Illimité sur devis pour les transformations longues.</p>
+      <div class="effect">
+        <strong>Effet attendu</strong>
+        <p>Qualifie le budget en amont. Élimine 80&nbsp;% des «&nbsp;combien ça coûte&nbsp;?&nbsp;» en appel découverte.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="pricing-head reveal">
+      <span class="small-tag">Tarifs</span>
+      <h2 style="margin-top:var(--gap-xs);">Trois formats, un seul principe : vous payez pour un résultat, pas pour des heures.</h2>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price-card reveal">
+        <div class="price-top">
+          <h3>Power 30 jours</h3>
+          <p class="price-desc">Pour clarifier rapidement une décision qui vous bloque.</p>
+        </div>
+        <a class="btn" href="#contact"><span>Démarrer en 30 jours</span></a>
+        <div class="price-row"><span class="price">1 200 €</span><small>HT — un mois</small></div>
+        <ul class="price-list">
+          <li><span class="tick"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Séances illimitées sur 30 jours</li>
+          <li><span class="tick"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Diagnostic d'entrée structuré</li>
+          <li><span class="tick"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Plan d'action écrit à 30 jours</li>
+          <li><span class="tick"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>WhatsApp asynchrone entre séances</li>
+        </ul>
+      </div>
+
+      <div class="price-card dark reveal delay-1">
+        <span class="popular-tag">Le plus choisi</span>
+        <div class="price-top">
+          <h3>Power 90 jours</h3>
+          <p class="price-desc">Pour mener une vraie transition, pas seulement la décider.</p>
+        </div>
+        <a class="btn inverse" href="#contact"><span>Construire ma transition</span></a>
+        <div class="price-row"><span class="price">2 900 €</span><small>HT — trois mois</small></div>
+        <ul class="price-list">
+          <li><span class="tick"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Tout le Power 30 jours, étendu à 90 jours</li>
+          <li><span class="tick"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Préparation entretiens / négociation salariale</li>
+          <li><span class="tick"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Bilan de mi-parcours à 45 jours</li>
+          <li><span class="tick"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Suivi 1 mois après la fin du programme</li>
+        </ul>
+      </div>
+
+      <div class="price-card reveal delay-2">
+        <div class="price-top">
+          <h3>Power Illimité</h3>
+          <p class="price-desc">Pour les transformations longues : burn-out, repositionnement, lancement.</p>
+        </div>
+        <a class="btn" href="#contact"><span>En parler de vive voix</span></a>
+        <div class="price-row"><span class="price">Sur devis</span><small>à partir de 4 500 € HT</small></div>
+        <ul class="price-list">
+          <li><span class="tick"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Accompagnement sans limite de durée</li>
+          <li><span class="tick"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Disponibilité prioritaire (créneaux dédiés)</li>
+          <li><span class="tick"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Suivi tiers : DRH, mentor, conjoint si pertinent</li>
+          <li><span class="tick"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Bilans trimestriels écrits</li>
+        </ul>
+      </div>
+    </div>
+
+    <p style="text-align:center; margin-top: var(--gap-md); color: var(--text-secondary); font-size: .9rem;">
+      Tous les programmes commencent par un appel découverte de 30 minutes — gratuit, sans engagement.
+    </p>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="demo-note">
+    <button class="note-pin" aria-label="Note 13">13</button>
+    <div class="note-popup">
+      <div class="note-popup-head">
+        <span class="note-num">N° 13 — FAQ</span>
+        <button class="note-close" aria-label="Fermer">×</button>
+      </div>
+      <h6>Levée d'objections</h6>
+      <p>Les 8 objections principales pré-traitées en accordéon (tarif, durée, en poste, différenciation, financement, présentiel/visio, etc.). Le prospect arrive au formulaire sans frein mental.</p>
+      <div class="effect">
+        <strong>Effet attendu</strong>
+        <p>Taux de complétion du formulaire&nbsp;: +30&nbsp;%.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="faq-head reveal">
+      <span class="small-tag">Questions fréquentes</span>
+      <h2 style="margin-top: var(--gap-xs);">Les questions qu'on me pose en appel découverte.</h2>
+    </div>
+
+    <div class="faq-list reveal delay-1">
+      <div class="faq-item">
+        <button class="faq-q">
+          Comment se déroule l'appel découverte ?
+          <span class="toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a">
+          30 minutes, en visio. Vous m'expliquez votre situation, je vous dis honnêtement si je suis la bonne personne pour vous accompagner — et si oui, le format adapté. Aucun pitch commercial, aucun engagement.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          En combien de temps voit-on des résultats ?
+          <span class="toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a">
+          La majorité de mes clients gagne en clarté dès les 4 à 6 premières semaines. Pour une transition complète (changement de poste, lancement, sortie de burn-out), comptez généralement entre 3 et 6 mois.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Travaillez-vous avec des personnes encore en poste ?
+          <span class="toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a">
+          Oui, c'est même la situation la plus fréquente. Les séances se font hors temps de travail (le soir ou le week-end) et la confidentialité est totale — votre employeur n'a pas à savoir.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Qu'est-ce qui vous différencie d'un autre coach ?
+          <span class="toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a">
+          Trois choses : ma certification HEC Paris, mes 15 ans en fonction de direction (donc je connais votre quotidien de l'intérieur), et le format Power Coaching qui supprime le rationnement de séances qu'on trouve partout ailleurs.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Le tarif paraît élevé. Est-ce vraiment justifié ?
+          <span class="toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a">
+          Une mauvaise décision de carrière coûte facilement 2 ans de stagnation et 15 à 30 % de salaire perdu. L'investissement dans le coaching se rentabilise généralement dès la première négociation salariale ou la première bascule réussie.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Présentiel ou visio ? À Paris ou ailleurs ?
+          <span class="toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a">
+          Les deux. Je reçois en présentiel dans le 8ᵉ arrondissement de Paris et j'accompagne en visio des cadres partout en France et à l'international (Europe, Maghreb, Amérique du Nord notamment).
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Peut-on arrêter en cours de programme ?
+          <span class="toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a">
+          Oui. Si après le premier mois vous estimez que ce n'est pas pour vous, je rembourse les mois non commencés. Aucun client n'a eu à demander ce remboursement à ce jour.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Le coaching est-il finançable (CPF, OPCO, employeur) ?
+          <span class="toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a">
+          Oui, le Power Coaching peut être pris en charge dans le cadre d'un plan de développement employeur, par certains OPCO et via le CPF pour des programmes éligibles. On en parle à l'appel découverte.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="demo-note">
+    <button class="note-pin" aria-label="Note 14">14</button>
+    <div class="note-popup">
+      <div class="note-popup-head">
+        <span class="note-num">N° 14 — Contact</span>
+        <button class="note-close" aria-label="Fermer">×</button>
+      </div>
+      <h6>Conversion qualifiée</h6>
+      <p>Formulaire long mais structuré (enjeu + situation). On filtre pour ne traiter que les vrais leads. L'objectif n'est pas la quantité d'appels, c'est leur qualité.</p>
+      <div class="effect">
+        <strong>Effet attendu</strong>
+        <p>Appels découverte plus pertinents = +taux de signature client.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="sec-head reveal" style="grid-template-columns: 1fr 1fr;">
+      <div class="left">
+        <span class="small-tag">Démarrer</span>
+        <h2>Prenons 30 minutes pour parler de votre cas.</h2>
+      </div>
+      <div class="right">
+        <p>L'appel découverte est gratuit, en visio, sans engagement. Vous repartez avec un retour honnête : oui, non, ou une autre direction.</p>
+      </div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-image reveal">
+        <img src="img/maryam-7.jpg" alt="">
+        <div class="tag-on-image">
+          <p>Réponse sous 24h ouvrées. Tous les échanges restent confidentiels.</p>
+        </div>
+      </div>
+
+      <form class="contact-form reveal delay-1" onsubmit="event.preventDefault(); this.querySelector('button[type=submit]').innerHTML='<span>Merci — je reviens vers vous sous 24h</span>';">
+        <p class="form-help">Tous les champs marqués d'une * sont nécessaires.</p>
+        <div class="form-row">
+          <label class="field"><input type="text" placeholder="Prénom *" required></label>
+          <label class="field"><input type="text" placeholder="Nom *" required></label>
+        </div>
+        <div class="form-row">
+          <label class="field"><input type="email" placeholder="Email *" required></label>
+          <label class="field"><input type="tel" placeholder="Téléphone"></label>
+        </div>
+        <label class="field"><input type="text" placeholder="Poste actuel / société"></label>
+        <label class="field">
+          <select>
+            <option>Mon enjeu — choisir…</option>
+            <option>Reconversion / changement de carrière</option>
+            <option>Transition de poste / négociation</option>
+            <option>Sortie de burn-out / équilibre</option>
+            <option>Lancement entrepreneurial</option>
+            <option>Autre</option>
+          </select>
+        </label>
+        <label class="field"><textarea placeholder="Décrivez brièvement votre situation actuelle *" required></textarea></label>
+        <button type="submit" class="btn solid"><span>Réserver mon appel découverte</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="demo-note">
+    <button class="note-pin" aria-label="Note 15">15</button>
+    <div class="note-popup">
+      <div class="note-popup-head">
+        <span class="note-num">N° 15 — Footer</span>
+        <button class="note-close" aria-label="Fermer">×</button>
+      </div>
+      <h6>Capture résiduelle</h6>
+      <p>Newsletter pour les visiteurs pas prêts à acheter. CTA secondaire qui transforme le trafic perdu en audience long terme. Audit Komo recommandait explicitement un lead magnet ici.</p>
+      <div class="effect">
+        <strong>Effet attendu</strong>
+        <p>+15&nbsp;% de leads sur 3 mois via le canal newsletter.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-top">
+    <div>
+      <a href="#" class="logo" style="color: var(--text-inverse);">
+        <span class="logo-mark" style="background: var(--text-inverse); color: var(--bg-primary);">M</span>
+        <span>Power Up</span>
+      </a>
+      <h2 style="margin-top: var(--gap-sm);">Pas encore prêt·e ? Restez en contact.</h2>
+      <p>Une fois par mois, je partage une lettre courte sur la reconversion, le leadership et la transition de carrière. Sans bruit, sans relance.</p>
+      <form class="nl-box" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('input').placeholder='Inscription confirmée — merci !';">
+        <input type="email" placeholder="Votre email professionnel" required>
+        <button class="nl-btn" type="submit">S'abonner</button>
+      </form>
+    </div>
+
+    <div class="footer-col">
+      <h6>Navigation</h6>
+      <ul>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#methode">Méthode</a></li>
+        <li><a href="#cas">Cas clients</a></li>
+        <li><a href="#temoignages">Témoignages</a></li>
+        <li><a href="#tarifs">Tarifs</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h6>Contact</h6>
+      <ul>
+        <li><a href="mailto:contact@m-powerup.com">contact@m-powerup.com</a></li>
+        <li><a href="#">Paris 8ᵉ — sur rendez-vous</a></li>
+        <li><a href="#contact">Réserver un appel</a></li>
+      </ul>
+      <h6 style="margin-top: var(--gap-md);">Suivre</h6>
+      <div class="footer-socials">
+        <a href="#" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bigtext">M&nbsp;Power&nbsp;Up</div>
+
+  <div class="footer-bottom">
+    <span>© 2026 M Power Up — Tous droits réservés.</span>
+    <span>Mentions légales · Confidentialité · CGV</span>
+  </div>
+</footer>
+
+<!-- ============ DEMO TOGGLE (annotations) ============ -->
+<button class="demo-toggle" id="demoToggle" aria-label="Afficher / masquer les notes">
+  <span class="dot"></span>
+  <span id="demoToggleLabel">Masquer les notes</span>
+</button>
+
+<script>
+  /* ============ SCROLL REVEAL ============ */
+  const ro = new IntersectionObserver((es) => {
+    es.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        ro.unobserve(e.target);
+      }
+    });
+  }, { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+  /* ============ COUNTER ANIMATION ============ */
+  const co = new IntersectionObserver((es) => {
+    es.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      const target = +el.dataset.target;
+      const dur = 2000;
+      const start = performance.now();
+      const tick = (now) => {
+        const t = Math.min((now - start) / dur, 1);
+        const eased = 1 - Math.pow(1 - t, 3);
+        el.textContent = Math.round(target * eased);
+        if (t < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      co.unobserve(el);
+    });
+  }, { threshold: .5 });
+  document.querySelectorAll('.counter').forEach(el => co.observe(el));
+
+  /* ============ TESTIMONIALS SLIDER ============ */
+  const slides = document.querySelectorAll('.testi-slide');
+  let idx = 0;
+  const go = (n) => {
+    slides[idx].classList.remove('active');
+    idx = (n + slides.length) % slides.length;
+    slides[idx].classList.add('active');
+  };
+  document.getElementById('tprev').onclick = () => go(idx - 1);
+  document.getElementById('tnext').onclick = () => go(idx + 1);
+  let auto = setInterval(() => go(idx + 1), 6500);
+
+  /* ============ FAQ ACCORDION ============ */
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q');
+    q.addEventListener('click', () => {
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+
+  /* ============ LINKEDIN CAROUSEL ============ */
+  const sTrack = document.getElementById('socialTrack');
+  const sPrev = document.getElementById('socialPrev');
+  const sNext = document.getElementById('socialNext');
+  const sBar = document.getElementById('socialProgress');
+
+  const stepWidth = () => {
+    const card = sTrack.querySelector('.social-card');
+    if (!card) return 380;
+    const gap = parseFloat(getComputedStyle(sTrack).gap) || 20;
+    return card.offsetWidth + gap;
+  };
+
+  const updateState = () => {
+    const max = sTrack.scrollWidth - sTrack.clientWidth;
+    const ratio = max <= 0 ? 1 : Math.min(1, Math.max(0, sTrack.scrollLeft / max));
+    const visibleRatio = sTrack.clientWidth / sTrack.scrollWidth;
+    sBar.style.width = (Math.max(visibleRatio, 0.18) * 100) + '%';
+    sBar.style.transform = `translateX(${(1 / Math.max(visibleRatio, 0.18) - 1) * ratio * 100}%)`;
+    sPrev.disabled = sTrack.scrollLeft <= 4;
+    sNext.disabled = sTrack.scrollLeft >= max - 4;
+  };
+
+  sPrev.addEventListener('click', () => sTrack.scrollBy({ left: -stepWidth(), behavior: 'smooth' }));
+  sNext.addEventListener('click', () => sTrack.scrollBy({ left: stepWidth(), behavior: 'smooth' }));
+  sTrack.addEventListener('scroll', updateState, { passive: true });
+  window.addEventListener('resize', updateState);
+  requestAnimationFrame(updateState);
+
+  /* ============ DEMO NOTES — popup + global toggle ============ */
+  const closeAllNotes = () => document.querySelectorAll('.note-popup.open').forEach(p => p.classList.remove('open'));
+
+  document.querySelectorAll('.note-pin').forEach(pin => {
+    pin.addEventListener('click', e => {
+      e.stopPropagation();
+      const popup = pin.parentElement.querySelector('.note-popup');
+      const wasOpen = popup.classList.contains('open');
+      closeAllNotes();
+      if (!wasOpen) popup.classList.add('open');
+    });
+  });
+
+  document.querySelectorAll('.note-close').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      btn.closest('.note-popup').classList.remove('open');
+    });
+  });
+
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.demo-note')) closeAllNotes();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeAllNotes();
+  });
+
+  const demoToggle = document.getElementById('demoToggle');
+  const demoToggleLabel = document.getElementById('demoToggleLabel');
+  demoToggle.addEventListener('click', () => {
+    document.body.classList.toggle('demo-off');
+    const off = document.body.classList.contains('demo-off');
+    demoToggleLabel.textContent = off ? 'Afficher les notes' : 'Masquer les notes';
+    if (off) closeAllNotes();
+  });
+</script>
+</body>
+</html>
