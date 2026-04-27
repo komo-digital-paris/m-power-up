@@ -153,7 +153,7 @@
     font-family: var(--serif);
     font-size: 1.5rem;
     color: var(--text-primary);
-    padding: 1.1rem 0;
+    padding: 1.1rem 1.5rem 1.1rem 0;
     letter-spacing: -.01em;
   }
   .logo-mark {
@@ -1238,9 +1238,8 @@
   .note-pin:hover { transform: scale(1.12) rotate(-6deg); }
 
   .note-popup {
-    position: absolute;
-    top: calc(100% + .85rem);
-    right: 0;
+    position: fixed;
+    z-index: 1000;
     width: 320px;
     max-height: 380px;
     overflow-y: auto;
@@ -1258,6 +1257,7 @@
     transform-origin: top right;
     pointer-events: none;
     transition: opacity .22s ease, transform .22s ease;
+    /* top and right are computed by JS at open time */
   }
   .note-popup.open {
     opacity: 1;
@@ -1488,7 +1488,17 @@
   }
 
   @media (max-width: 768px) {
-    .note-popup { width: 280px; right: -8px; }
+    .note-popup {
+      /* Mobile: bottom sheet pinned to viewport edges */
+      width: auto !important;
+      max-height: 65vh;
+      top: auto !important;
+      bottom: 5.5rem !important;
+      left: 1rem !important;
+      right: 1rem !important;
+      transform-origin: bottom center;
+    }
+    .note-popup::before { display: none; }
     .demo-toggle { font-size: .65rem; padding: .7rem 1rem; }
   }
 
@@ -1534,7 +1544,7 @@
       <p>L'audit Komo a relevé une USP floue sur la page actuelle. Ici on prend l'inverse&nbsp;: un hook ultra-ciblé «&nbsp;cadres en remise en question&nbsp;» + une promesse-action «&nbsp;transformer le doute en stratégie&nbsp;». Le persona se reconnaît avant le scroll.</p>
       <div class="effect">
         <strong>Effet attendu</strong>
-        <p>On espère viser un +20&nbsp;%+ de scroll-down et +15-20&nbsp;% de clics sur le CTA appel découverte vs un hero générique.</p>
+        <p>Plus de visiteurs resteront sur la page et liront la suite, parce que le hook leur parle directement. À la clé&nbsp;: plus d'appels découverte avec des profils alignés à votre offre.</p>
       </div>
     </div>
   </div>
@@ -1585,7 +1595,7 @@
       <p>4 chiffres scannables qui ancrent la légitimité avant l'argumentaire. C'est le filtre de confiance n°&nbsp;1 juste après le hero.</p>
       <div class="effect">
         <strong>Effet attendu</strong>
-        <p>On espère viser une baisse du taux de rebond d'environ 10-12&nbsp;% sur cette zone critique.</p>
+        <p>Plus de visiteurs descendront dans la page sans hésiter. Les chiffres signaleront que vous êtes installée et inspireront confiance dès les 5 premières secondes.</p>
       </div>
     </div>
   </div>
@@ -1631,7 +1641,7 @@
       <p>Bandeau sombre qui rompt avec le ton marketing. Vous sortez du pitch pour incarner une conviction née de votre parcours personnel. C'est l'ancre émotionnelle de la page.</p>
       <div class="effect">
         <strong>Effet attendu</strong>
-        <p>On espère viser une augmentation du temps passé sur la page et une préparation émotionnelle au pricing premium.</p>
+        <p>Une connexion émotionnelle se créera. Le visiteur se reconnaîtra dans votre histoire et percevra votre valeur — le tarif premium deviendra logique pour lui.</p>
       </div>
     </div>
   </div>
@@ -1659,7 +1669,7 @@
       <p>Les écoles d'origine de vos clients défilent en continu. Sous-entendu : vous jouez dans cette ligue. Le visiteur se positionne — ou comprend qu'il n'est pas la cible.</p>
       <div class="effect">
         <strong>Effet attendu</strong>
-        <p>On espère viser une auto-qualification claire&nbsp;: les bons leads continuent, les mauvais s'écartent (c'est ce qu'on veut).</p>
+        <p>Les cadres issus de ces écoles vous reconnaîtront immédiatement. Ils se diront «&nbsp;cette coach parle ma langue&nbsp;» et passeront en mode prospect chaud.</p>
       </div>
     </div>
   </div>
@@ -1699,7 +1709,7 @@
       <p>Les 4 piliers du Power Coaching, formulés en bénéfices tangibles (illimité, perso, HEC, flexible). On répond à l'objection «&nbsp;encore un coach lambda&nbsp;» avant qu'elle se pose.</p>
       <div class="effect">
         <strong>Effet attendu</strong>
-        <p>On espère lever l'objection produit et préparer le clic vers Cas clients.</p>
+        <p>Le visiteur comprendra la singularité de votre offre avant même de voir les tarifs. Il arrivera en appel convaincu que c'est différent — et prêt à s'engager.</p>
       </div>
     </div>
   </div>
@@ -1756,7 +1766,7 @@
       <p>Cartes interactives qui se déplient au hover&nbsp;: avant/après chiffré pour 4 personas-types. Le prospect se projette dans un cas similaire au sien.</p>
       <div class="effect">
         <strong>Effet attendu</strong>
-        <p>On espère viser un +30-35&nbsp;% d'engagement (hover) et un passage direct vers Tarifs/FAQ.</p>
+        <p>Le prospect se projettera&nbsp;: «&nbsp;ah, c'est exactement mon cas&nbsp;». Il arrivera en appel avec une demande déjà construite, prêt à embarquer sur un programme.</p>
       </div>
     </div>
   </div>
@@ -1844,7 +1854,7 @@
       <p>L'audit Komo recommandait 3 niches explicites. On les nomme noir sur blanc&nbsp;: le bon prospect dit «&nbsp;c'est moi&nbsp;», le mauvais s'écarte. Le tri se fait avant l'appel.</p>
       <div class="effect">
         <strong>Effet attendu</strong>
-        <p>On espère viser une meilleure qualité d'appels découverte (pas plus de quantité).</p>
+        <p>Vous recevrez plus d'appels des profils que vous adorez accompagner. Les bons prospects se reconnaîtront et voudront vous parler en priorité.</p>
       </div>
     </div>
   </div>
@@ -1909,7 +1919,7 @@
       <p>Bio narrative + portrait + citation. Pas un CV, une histoire. On crée le rapport humain qui justifie le tarif premium et différencie d'un coach interchangeable.</p>
       <div class="effect">
         <strong>Effet attendu</strong>
-        <p>On espère viser une hausse de conversion sur les paliers Power 90&nbsp;jours et Illimité.</p>
+        <p>Plus de prospects choisiront Power 90&nbsp;jours ou Illimité plutôt que le format court. Quand ils sentiront qui vous êtes, ils s'engageront dans la durée.</p>
       </div>
     </div>
   </div>
@@ -1956,7 +1966,7 @@
       <p>Le coaching n'est pas un métier réglementé en France. Sceau HEC officiel + 4 accréditations vérifiables. On lève l'objection «&nbsp;à quoi reconnaît-on un vrai coach&nbsp;?&nbsp;» en 5 secondes.</p>
       <div class="effect">
         <strong>Effet attendu</strong>
-        <p>On espère viser un critère de tri n°&nbsp;1 pour la cible HEC et une baisse d'environ 50&nbsp;% des questions credentials en appel.</p>
+        <p>La cible HEC vous reconnaîtra comme «&nbsp;la coach&nbsp;» pour ces profils. Plus de prospects premium arriveront en confiance, sans avoir à défendre vos diplômes.</p>
       </div>
     </div>
   </div>
@@ -2052,7 +2062,7 @@
       <p>Slider sur fond sombre. Chaque témoignage adresse le pain point d'un persona précis (reconversion, Codir, burn-out, lancement). Pas de citations génériques.</p>
       <div class="effect">
         <strong>Effet attendu</strong>
-        <p>On espère viser un +20-25&nbsp;% de conversion vers le formulaire pour les prospects identifiés.</p>
+        <p>Les prospects arriveront au formulaire déjà convaincus que ça marche pour leur cas. Plus de réservations, des appels plus engageants.</p>
       </div>
     </div>
   </div>
@@ -2120,7 +2130,7 @@
       <p>Vos derniers posts en carrousel. Vous produisez de la pensée, pas que du service. On capture le visiteur pas prêt à acheter via le suivi LinkedIn.</p>
       <div class="effect">
         <strong>Effet attendu</strong>
-        <p>On espère activer le canal de remarketing organique LinkedIn sur 3-6 mois.</p>
+        <p>Les visiteurs pas encore prêts à acheter resteront dans votre orbite. Quand ils décideront, dans 3 ou 6 mois, ils reviendront vers vous en priorité.</p>
       </div>
     </div>
   </div>
@@ -2315,7 +2325,7 @@
       <p>L'audit Komo le souligne&nbsp;: afficher les tarifs sur du high-ticket augmente la confiance. Le 90 jours en avant, l'Illimité sur devis pour les transformations longues.</p>
       <div class="effect">
         <strong>Effet attendu</strong>
-        <p>On espère viser une qualification du budget en amont — l'objectif est d'éliminer environ 80&nbsp;% des «&nbsp;combien ça coûte&nbsp;?&nbsp;» en appel découverte.</p>
+        <p>Les prospects arriveront à l'appel en connaissance des prix et prêts à s'engager. Vous gagnerez en énergie, eux en clarté — et ça accélèrera les signatures.</p>
       </div>
     </div>
   </div>
@@ -2392,7 +2402,7 @@
       <p>Les 8 objections principales pré-traitées en accordéon (tarif, durée, en poste, différenciation, financement, présentiel/visio, etc.). Le prospect arrive au formulaire sans frein mental.</p>
       <div class="effect">
         <strong>Effet attendu</strong>
-        <p>On espère viser un taux de complétion du formulaire à +25-30&nbsp;%.</p>
+        <p>Les prospects arriveront au formulaire sans frein mental. Les objections classiques auront déjà eu leur réponse, ils passeront directement à la prise de contact.</p>
       </div>
     </div>
   </div>
@@ -2499,7 +2509,7 @@
       <p>Formulaire long mais structuré (enjeu + situation). On filtre pour ne traiter que les vrais leads. L'objectif n'est pas la quantité d'appels, c'est leur qualité.</p>
       <div class="effect">
         <strong>Effet attendu</strong>
-        <p>On espère viser des appels découverte plus pertinents et donc un meilleur taux de signature.</p>
+        <p>Vos appels découverte seront plus denses&nbsp;: le prospect arrivera avec son contexte, prêt à embarquer. Vous signerez plus facilement et plus souvent.</p>
       </div>
     </div>
   </div>
@@ -2563,7 +2573,7 @@
       <p>Newsletter pour les visiteurs pas prêts à acheter. CTA secondaire qui transforme le trafic perdu en audience long terme. Audit Komo recommandait explicitement un lead magnet ici.</p>
       <div class="effect">
         <strong>Effet attendu</strong>
-        <p>On espère viser un +10-15&nbsp;% de leads sur 3 mois via le canal newsletter.</p>
+        <p>Les visiteurs qui ne réservent pas tout de suite resteront en contact. Sur 3-6 mois, ce canal deviendra une source régulière de nouveaux clients.</p>
       </div>
     </div>
   </div>
@@ -2725,15 +2735,52 @@
   /* ============ DEMO NOTES — popup + global toggle ============ */
   const closeAllNotes = () => document.querySelectorAll('.note-popup.open').forEach(p => p.classList.remove('open'));
 
+  const positionPopup = (pin, popup) => {
+    if (window.innerWidth <= 768) {
+      // Mobile: CSS handles positioning (bottom sheet)
+      popup.style.top = '';
+      popup.style.right = '';
+      popup.style.left = '';
+      return;
+    }
+    const r = pin.getBoundingClientRect();
+    const popupWidth = 320;
+    const margin = 12;
+    let top = r.bottom + margin;
+    let right = window.innerWidth - r.right;
+    // Keep popup within viewport horizontally
+    if (right + popupWidth > window.innerWidth - 8) {
+      right = window.innerWidth - popupWidth - 8;
+    }
+    popup.style.top = top + 'px';
+    popup.style.right = right + 'px';
+    popup.style.left = 'auto';
+  };
+
   document.querySelectorAll('.note-pin').forEach(pin => {
     pin.addEventListener('click', e => {
       e.stopPropagation();
       const popup = pin.parentElement.querySelector('.note-popup');
       const wasOpen = popup.classList.contains('open');
       closeAllNotes();
-      if (!wasOpen) popup.classList.add('open');
+      if (!wasOpen) {
+        positionPopup(pin, popup);
+        popup.classList.add('open');
+      }
     });
   });
+
+  // Reposition open popups when scrolling or resizing
+  const repositionOpenPopup = () => {
+    const open = document.querySelector('.note-popup.open');
+    if (!open) return;
+    const pin = open.parentElement.querySelector('.note-pin');
+    positionPopup(pin, open);
+  };
+  window.addEventListener('scroll', () => {
+    if (window.innerWidth > 768) closeAllNotes();
+  }, { passive: true });
+  window.addEventListener('resize', repositionOpenPopup);
 
   document.querySelectorAll('.note-close').forEach(btn => {
     btn.addEventListener('click', e => {
