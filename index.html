@@ -960,8 +960,19 @@
     text-align: center;
   }
 
-  @media (max-width: 768px) { .social-card { flex: 0 0 300px; } }
-  @media (max-width: 480px) { .social-card { flex: 0 0 calc(100vw - 4rem); } }
+  @media (max-width: 768px) {
+    .social-card { flex: 0 0 300px; }
+    .social-card-head { padding: .85rem 1rem .65rem; }
+    .social-avatar { width: 36px; height: 36px; }
+    .social-body { padding: 0 1rem .7rem; font-size: .85rem; }
+    .social-body p { margin-bottom: .35rem; }
+    .social-img { aspect-ratio: auto; height: 150px; }
+    .social-foot { padding: .6rem 1rem .85rem; font-size: .75rem; }
+  }
+  @media (max-width: 480px) {
+    .social-card { flex: 0 0 calc(100vw - 3rem); }
+    .social-img { height: 140px; }
+  }
 
   /* ============ PRICING ============ */
   .pricing { background: var(--bg-secondary-accent); }
