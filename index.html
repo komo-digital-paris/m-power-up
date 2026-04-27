@@ -344,9 +344,25 @@
   .counter-num small { font-size: .55em; vertical-align: super; opacity: .8; }
   .counter-label { font-size: .85rem; color: var(--text-secondary); max-width: 11rem; }
 
-  @media (max-width: 991px) {
-    .counters-grid { grid-template-columns: 1fr 1fr; }
+  @media (max-width: 1100px) {
+    .counters-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--gap-sm);
+    }
+    .counters-head { grid-column: 1 / -1; margin-bottom: var(--gap-xs); }
     .vert-divider { display: none; }
+    .counter-num { font-size: 2.8rem; }
+  }
+  @media (max-width: 768px) {
+    .counters-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--gap-sm) 1.5rem;
+    }
+    .counter-num { font-size: 2.5rem; }
+  }
+  @media (max-width: 420px) {
+    .counters-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+    .counter-num { font-size: 2.4rem; }
   }
 
   /* ============ MANIFESTO BAND ============ */
@@ -1195,6 +1211,42 @@
     transition: background .25s;
   }
   .nl-btn:hover { background: #fff; }
+
+  /* ============ GLOBAL MOBILE TUNING ============ */
+  @media (max-width: 768px) {
+    section { padding: var(--gap-lg) 0; }
+    .container { padding: 0 1.25rem; }
+    .marquee-text { font-size: 1.4rem; }
+    .marquee-train { gap: 3rem; padding-right: 3rem; }
+    .price-card { padding: 1.85rem 1.4rem; }
+    .price-card.dark { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+    .price-row .price { font-size: 2.2rem; }
+    .creds-grid .cred { padding: var(--gap-sm) 1.25rem; }
+    .creds-strip { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .creds-badge-wrap { width: 100%; }
+    .creds-badge-wrap .badge-meta { flex: 1; }
+    .testi-slide blockquote { font-size: 1.2rem; }
+    .testi-container { padding: 0 1.25rem; }
+    .footer-top { padding: 0 1.25rem var(--gap-md); }
+    .nl-box { width: 100%; max-width: none; }
+    .hero-big-text { font-size: clamp(40px, 17vw, 220px); }
+    .footer-bigtext { font-size: clamp(40px, 17vw, 220px); }
+    .testi { padding: var(--gap-lg) 0; }
+    .about-bottom { padding: var(--gap-lg) 0; }
+    .manifesto { padding: var(--gap-lg) 0; }
+  }
+  @media (max-width: 480px) {
+    section { padding: 3rem 0; }
+    .container { padding: 0 1rem; }
+    .price-card { padding: 1.6rem 1.2rem; }
+    .price-list li { font-size: .85rem; }
+    .case-content { padding: 1.1rem 1.2rem; inset: auto .75rem .75rem .75rem; }
+    .case-content h4 { font-size: 1.1rem; }
+    .niche { padding: 1.5rem; }
+    .service-card { padding: var(--gap-sm) 1.25rem; }
+    .how-card { padding: 1.5rem; }
+    .contact-form { padding: 1.5rem; }
+  }
 
   /* ============ DEMO NOTES (PDF-style annotations) ============ */
   section, footer { position: relative; }
