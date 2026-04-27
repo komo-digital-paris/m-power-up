@@ -1605,9 +1605,10 @@
       </div>
       <h6>La promesse en 3 secondes</h6>
       <p>L'audit Komo a relevé une USP floue sur la page actuelle. Ici on prend l'inverse&nbsp;: un hook ultra-ciblé «&nbsp;cadres en remise en question&nbsp;» + une promesse-action «&nbsp;transformer le doute en stratégie&nbsp;». Le persona se reconnaît avant le scroll.</p>
+      <p>Au-delà du hook, toute la landing sera pensée pour incarner le côté <strong>pro et haut de gamme</strong>&nbsp;: navy profond, typographie éditoriale Marcellus, animations fines, mise en page premium. Vous vous démarquerez nettement des coachs aux sites grand public.</p>
       <div class="effect">
         <strong>Effet attendu</strong>
-        <p>Plus de visiteurs resteront sur la page et liront la suite, parce que le hook leur parle directement. À la clé&nbsp;: plus d'appels découverte avec des profils alignés à votre offre.</p>
+        <p>Plus de visiteurs resteront sur la page et liront la suite, parce que le hook leur parle directement. À la clé&nbsp;: plus d'appels découverte avec des profils alignés à votre offre, qui acceptent le tarif premium sans hésiter.</p>
       </div>
     </div>
   </div>
@@ -2699,7 +2700,6 @@
   <p style="font-size:.78rem; color:#2A1F0099; margin-bottom: .35rem;">→ Cliquez sur les pins jaunes <strong style="background:#FFD24A; color:#2A1F00; padding: 2px 8px; border-radius: 999px; border: 1px solid #2A1F00; font-size:.76rem; letter-spacing: .02em;">N°</strong> pour comprendre le rôle de chaque section.</p>
   <div class="demo-intro-actions">
     <button class="ok-btn" id="demoIntroOk" type="button">Compris, je continue</button>
-    <button class="skip-btn" id="demoIntroSkip" type="button" aria-label="Masquer toutes les notes">Masquer</button>
   </div>
 </aside>
 
@@ -2873,10 +2873,6 @@
   const demoIntro = document.getElementById('demoIntro');
   const hideIntro = () => demoIntro.classList.add('hide');
   document.getElementById('demoIntroOk').addEventListener('click', hideIntro);
-  document.getElementById('demoIntroSkip').addEventListener('click', () => {
-    hideIntro();
-    if (!document.body.classList.contains('demo-off')) demoToggle.click();
-  });
   document.getElementById('demoInfoBtn').addEventListener('click', () => {
     demoIntro.classList.toggle('hide');
   });
